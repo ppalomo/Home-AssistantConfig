@@ -19,4 +19,4 @@
   action:
     
     - service: light.turn_on
-      entity_id: light.gateway
+      entity_id: light.luz_gateway

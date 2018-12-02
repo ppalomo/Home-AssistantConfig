@@ -131,6 +131,18 @@ alexa:
 
   smart_home:
     filter:
+      include_entities:
+        - light.luz_gateway # Alexa, enciende/apaga la luz del gateway
+        - switch.bola_comedor # Alexa, enciende/apaga la bola del comedor
+        - switch.cono_comedor # Alexa, enciende/apaga el cono del comedor
+        - switch.arbol_navidad # Alexa, enciende/apaga el árbol de navidad
+        - switch.leds_cocina # Alexa enciende/apaga los leds de la cocina
+        - sensor.temperatura_dormitorio # Alexa, dime la temperatura del dormitorio
+        - script.turn_on_livingroom_ambient_lights # Alexa, enciende las luces de ambiente del comedor
+        - script.turn_off_livingroom_lights 
+        - script.wakeup_time
+      # include_domains:
+      #   - switch
       exclude_entities:
         - group.all_automations
         - group.all_scripts
@@ -148,7 +160,11 @@ alexa:
         - sensor
         - input_boolean
         - media_player
-        #- switch
+        - switch
+        - group
+    entity_config:
+      sensor.temperatura_dormitorio:
+        name: Dormitorio
         
   flash_briefings:
     whoishome:

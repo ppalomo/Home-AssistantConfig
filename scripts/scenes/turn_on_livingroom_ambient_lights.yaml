@@ -4,7 +4,7 @@
 #                                                 #
 ###################################################
 
-alias: Luces ambiente comedor
+alias: Luces ambiente del comedor
 sequence:
 
   - alias: Encender luces del comedor
