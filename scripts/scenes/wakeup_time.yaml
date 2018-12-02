@@ -8,12 +8,9 @@ alias: Buenos días
 sequence:
 
   - alias: Encender luces del comedor
-    service: switch.turn_on
-    data:
-      entity_id: 
-        - switch.arbol_navidad
-        - switch.bola_comedor
-        - switch.cono_comedor
+    service: script.turn_on
+    entity_id:
+      - script.turn_on_livingroom_ambient_lights
 
   - alias: Encender luces de la cocina
     service: switch.turn_on

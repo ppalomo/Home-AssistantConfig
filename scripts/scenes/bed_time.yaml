@@ -8,9 +8,9 @@ alias: Buenas noches
 sequence:
 
   - alias: Apagar luces del comedor
-    service: switch.turn_off
-    data:
-      entity_id: group.luces_comedor, group.luces_cocina
+    service: script.turn_off
+    entity_id:
+      - script.turn_off_livingroom_lights
 
   - alias: Apagar media players
     service: media_player.turn_off

@@ -1,0 +1,16 @@
+###################################################
+#                                                 #
+#              Apagar luces comedor               #
+#                                                 #
+###################################################
+
+alias: Apagar luces comedor
+sequence:
+
+  - alias: Apagar luces comedor
+    service: switch.turn_off
+    data:
+      entity_id: 
+        - switch.arbol_navidad
+        - switch.bola_comedor
+        - switch.cono_comedor

@@ -1,0 +1,16 @@
+###################################################
+#                                                 #
+#            Luces ambiente comedor               #
+#                                                 #
+###################################################
+
+alias: Luces ambiente comedor
+sequence:
+
+  - alias: Encender luces del comedor
+    service: switch.turn_on
+    data:
+      entity_id: 
+        - switch.arbol_navidad
+        - switch.bola_comedor
+        - switch.cono_comedor

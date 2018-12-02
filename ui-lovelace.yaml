@@ -21,7 +21,7 @@ views:
 ####################################################
 
   - id: summary
-    title: Inicio
+    title: General
     icon: mdi:home
     cards:
     
@@ -297,23 +297,96 @@ views:
 
 ####################################################
 #                                                  #
-#                     Luces                        #
+#                     Comedor                      #
 #                                                  #
 ####################################################
 
-  - id: lights
-    title: Luces
-    icon: mdi:lightbulb
+  - id: comedor
+    title: Comedor
+    #icon: mdi:lightbulb
     cards:
-    
-      # Comedor
-      - type: entities
-        title: Comedor
-        show_header_toggle: true
+      
+      - type: glance
         entities:
-          - switch.cono_comedor
-          - switch.arbol_navidad
-          - switch.bola_comedor
+          - entity: sensor.nest_thermostat_temperature
+            name: Temperatura
+          - entity: sensor.nest_thermostat_humidity
+            name: Humedad
+      
+      - type: vertical-stack
+        title: Luces
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                icon: mdi:lightbulb
+                entity: switch.bola_comedor
+                name: Sofá
+                color: rgb(255, 204, 97)
+              - type: "custom:button-card"
+                entity: switch.bola_comedor
+                icon: mdi:lightbulb
+                name: Bola
+                color: rgb(255, 204, 97)
+              - type: "custom:button-card"
+                entity: switch.cono_comedor
+                icon: mdi:lightbulb
+                name: Cono
+                color: rgb(255, 204, 97)
+              - type: "custom:button-card"
+                entity: switch.arbol_navidad
+                icon: mdi:pine-tree
+                name: Árbol
+                color: rgb(38, 174, 96)
+                
+      - type: horizontal-stack
+        cards:
+          - type: "custom:button-card"
+            icon: mdi:weather-night
+            entity: script.turn_on_livingroom_ambient_lights
+            size: 40px
+            name: Luces ambiente
+            style:
+              - text-transform: none
+              - color: white
+              - background-color: rgb(28, 128, 199)
+          - type: "custom:button-card"
+            icon: mdi:flash-off
+            entity: script.turn_off_livingroom_lights
+            name: Apagar luces
+            size: 40px
+            style:
+              - text-transform: none
+              - color: white
+              - background-color: rgb(28, 128, 199)
+                
+    
+      # # Iluminación Gateway
+      # - type: sensor
+      #   entity: sensor.iluminacion_gateaway
+      #   name: Iluminación Gateway
+      #   height: 75
+      #   line_color: "#3498db"
+
+####################################################
+#                                                  #
+#                    Dormitorio                    #
+#                                                  #
+####################################################
+
+  - id: dormitorio
+    title: Dormitorio
+    #icon: mdi:lightbulb
+    cards:
+      
+      - type: glance
+        entities:
+          - entity: sensor.temperatura_dormitorio
+            name: Temperatura
+          - entity: sensor.humedad_dormitorio
+            name: Humedad
+          - entity: sensor.presion_dormitorio
+            name: Presión
 
 ####################################################
 #                                                  #
