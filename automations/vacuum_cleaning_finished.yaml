@@ -1,5 +1,10 @@
-# Notificación que se envía al finalizar la limpieza
-- alias: La roomba ha acabado de limpiar
+###################################################
+#                                                 #
+#           La limpieza ha finalizado             #
+#                                                 #
+###################################################
+
+- alias: La limpieza ha finalizado
 
   trigger:
     

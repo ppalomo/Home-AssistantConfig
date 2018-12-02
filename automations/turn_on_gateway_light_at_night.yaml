@@ -1,8 +1,9 @@
 ###################################################
 #                                                 #
-#    Encendido automático de la luz del gateway   #
+#   Encendido automático de la luz del gateway    #
 #                                                 #
 ###################################################
+
 - alias: Encendido automático de la luz del gateway
 
   trigger:

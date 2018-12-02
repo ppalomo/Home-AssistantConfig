@@ -1,16 +1,25 @@
-- alias: Nest is off mode
+###################################################
+#                                                 #
+#           El termostato está apagado            #
+#                                                 #
+###################################################
+
+- alias: El termostato está apagado
 
   trigger:
+  
     - platform: state
       entity_id: sensor.nest_thermostat_operation_mode
       to: 'off'
 
   condition:
+  
     condition: state
     entity_id: input_boolean.notify_thermostat
     state: 'on'
   
   action:
+  
     - service: notify.telegramdepablo
       data:
         title: "Termostato:"

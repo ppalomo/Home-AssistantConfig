@@ -1,4 +1,9 @@
-# Automation para días de lluvia
+###################################################
+#                                                 #
+#                Alerta de lluvia                 #
+#                                                 #
+###################################################
+
 - alias: Alerta de lluvia
 
   trigger:

@@ -1,4 +1,9 @@
-# Notificación de presencia cuando alguien de la familia entra en casa
+###################################################
+#                                                 #
+#            Alguien ha llegado a casa            #
+#                                                 #
+###################################################
+
 - alias: Alguien ha llegado a casa
 
   trigger:

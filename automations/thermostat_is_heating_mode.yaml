@@ -1,16 +1,25 @@
-- alias: Nest is heating mode
+###################################################
+#                                                 #
+#         La calefacción se ha encendido          #
+#                                                 #
+###################################################
+
+- alias: La calefacción se ha encendido
 
   trigger:
+  
     - platform: state
       entity_id: sensor.nest_thermostat_operation_mode
       to: 'heat'
 
   condition:
+  
     condition: state
     entity_id: input_boolean.notify_thermostat
     state: 'on'
   
   action:
+  
     - service: notify.telegramdepablo
       data:
         title: "Termostato:"

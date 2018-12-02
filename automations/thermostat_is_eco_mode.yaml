@@ -1,16 +1,25 @@
-- alias: Nest is eco mode
+###################################################
+#                                                 #
+#         El termostato está en modo ECO          #
+#                                                 #
+###################################################
+
+- alias: El termostato está en modo ECO
 
   trigger:
+  
     - platform: state
       entity_id: sensor.nest_thermostat_operation_mode
       to: 'eco'
 
   condition:
+  
     condition: state
     entity_id: input_boolean.notify_thermostat
     state: 'on'
 
   action:
+  
     - service: notify.telegramdepablo
       data:
         title: "Termostato:"

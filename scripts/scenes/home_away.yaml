@@ -1,0 +1,14 @@
+###################################################
+#                                                 #
+#                   Nos vamos                     #
+#                                                 #
+###################################################
+
+alias: Nos vamos
+sequence:
+
+  - alias: Apagamos todas las luces
+    service: homassistant.turn_off
+    entity_id:
+      - group.luces_comedor
+      - group.luces_cocina

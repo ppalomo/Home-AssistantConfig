@@ -1,0 +1,13 @@
+###################################################
+#                                                 #
+#                     Modo tv                     #
+#                                                 #
+###################################################
+
+alias: Modo tele
+sequence:
+
+  - alias: Encender luces del comedor
+    service: script.turn_on
+    entity_id:
+      - script.turn_on_livingroom_ambient_lights
