@@ -1,0 +1,22 @@
+###################################################
+#                                                 #
+#    Encendido automático de la luz del gateway   #
+#                                                 #
+###################################################
+- alias: Encendido automático de la luz del gateway
+
+  trigger:
+
+    - platform: sun
+      event: sunset
+
+  condition:
+    
+    - condition: state
+      entity_id: input_boolean.gateway_light_night_mode
+      state: 'on'
+  
+  action:
+    
+    - service: light.turn_on
+      entity_id: light.gateway

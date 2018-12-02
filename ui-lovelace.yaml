@@ -417,6 +417,7 @@ views:
         title: Automatizaciones
         show_header_toggle: true
         entities:
+          - entity: input_boolean.gateway_light_night_mode
           - entity: input_boolean.daily_vacuum
             name: Limpieza diaria
             icon: mdi:broom
