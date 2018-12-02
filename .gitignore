@@ -1,0 +1,19 @@
+
+# Whitelist files/folders
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders
+.storage
+.cloud
+.google.token
+
+# Ignore files
+.google.token
+.uuid
+secrets.yaml
+known_devices.yaml
+google_calendars.yaml
+*.log
+*.db

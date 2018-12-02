@@ -1,0 +1,5 @@
+alias: Apaga la calefacción
+sequence:
+- service: climate.set_operation_mode
+  data:
+    operation_mode: off

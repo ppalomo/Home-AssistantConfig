@@ -1,0 +1,4 @@
+- name: home_away
+  alias: Apagar todas las luces
+  entities:
+    group.luces_comedor: off

@@ -1,0 +1,13 @@
+- platform: template
+  sensors:
+    nest_mode_heat_20:
+      value_template: >-
+        {% if is_state('sensor.nest_thermostat_operation_mode', 'heat') %}
+          {% if is_state('sensor.nest_thermostat_target', '20.0') %}
+            on
+          {% else %}
+            off
+          {% endif %}
+        {% else %}
+          off
+        {% endif %}

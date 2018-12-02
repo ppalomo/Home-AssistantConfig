@@ -1,0 +1,5 @@
+alias: Pon la calefacción en modo ECO
+sequence:
+- service: climate.set_operation_mode
+  data:
+    operation_mode: eco

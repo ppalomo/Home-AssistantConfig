@@ -1,0 +1,9 @@
+alias: Limpia el comedor
+sequence:
+
+  # Room cleaning
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+      command: app_zoned_clean
+      params: [[23000, 22000, 28500, 28000, 1]]

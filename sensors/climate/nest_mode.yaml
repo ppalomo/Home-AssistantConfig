@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    nest_mode:
+      friendly_name: "Thermostat mode"
+      value_template: >-
+        {% if is_state('sensor.nest_thermostat_operation_mode', 'eco') %}
+          Modo ECO
+        {% elif is_state('sensor.nest_thermostat_operation_mode', 'off') %}
+          Calefacción apagada
+        {% else %}
+          Calefacción encendida
+        {% endif %}

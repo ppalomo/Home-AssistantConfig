@@ -1,0 +1,21 @@
+- alias: Nest is heating mode
+
+  trigger:
+    - platform: state
+      entity_id: sensor.nest_thermostat_operation_mode
+      to: 'heat'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.notify_thermostat
+    state: 'on'
+  
+  action:
+    - service: notify.telegramdepablo
+      data:
+        title: "Termostato:"
+        message: |
+          Se ha encendido la calefacción
+          - Temperatura actual: {{ states.sensor.nest_thermostat_temperature.state }}°C
+          - Temperatura objetivo: {{ states.sensor.nest_thermostat_target.state }}°C
+          - Temperatura exterior: {{ states.sensor.dark_sky_temperature.state }}°C

@@ -1,0 +1,8 @@
+- platform: template
+  sensors:
+    summary:
+      friendly_name: Informe de situación
+      value_template: >-
+        Este es el informe de situación de la casa.
+        {{ states.sensor.lights_summary.state }}{{- '\n' -}}
+        {{ states.sensor.heating_summary.state }}

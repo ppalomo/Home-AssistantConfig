@@ -1,0 +1,26 @@
+###################################################
+#                                                 #
+#                  Buenos días                    #
+#                                                 #
+###################################################
+
+alias: Buenos días
+sequence:
+
+  - alias: Encender luces del comedor
+    service: switch.turn_on
+    data:
+      entity_id: 
+        - switch.arbol_navidad
+        - switch.bola_comedor
+        - switch.cono_comedor
+
+  - alias: Encender luces de la cocina
+    service: switch.turn_on
+    data:
+      entity_id: switch.leds_cocina
+
+  - alias: Encendido TV comedor al despertarse
+    service: script.turn_on
+    entity_id:
+      - script.wakeup_time_tv

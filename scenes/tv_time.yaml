@@ -1,0 +1,12 @@
+- name: tv_time
+  alias: Hora de ver la tele
+  entities:
+
+    # Luces
+    switch.cono_comedor: on
+    switch.bola_comedor: on
+    switch.arbol_navidad: on
+
+    # Media players
+    media_player.salita: off
+    media_player.dormitorio: off

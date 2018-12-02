@@ -1,0 +1,9 @@
+alias: Limpia la cocina
+sequence:
+
+  # Room cleaning
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+      command: app_zoned_clean
+      params: [[25500, 22500, 28500, 26000, 1]]

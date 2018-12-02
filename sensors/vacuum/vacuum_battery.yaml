@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    vacuum_battery:
+      friendly_name: Vacuum Battery
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Batería: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_level }}'
+      unit_of_measurement: '%'
+      icon_template: '{{ states.vacuum.xiaomi_vacuum_cleaner.attributes.battery_icon }}'

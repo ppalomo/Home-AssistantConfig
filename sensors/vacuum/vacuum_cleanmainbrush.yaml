@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    vacuum_cleanmainbrush:
+      friendly_name: Replace main brush
+      unit_of_measurement: 'h'
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Escobilla 1: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }}'
+      icon_template: 'mdi:screwdriver'

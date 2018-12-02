@@ -1,0 +1,39 @@
+# Notificación de presencia cuando alguien de la familia entra en casa
+- alias: Alguien ha llegado a casa
+
+  trigger:
+    
+    - platform: state
+      entity_id: device_tracker.natalia, device_tracker.pablo
+      from: not_home
+      to: home
+
+  condition:
+    
+    - condition: state
+      entity_id: input_boolean.notify_presence
+      state: 'on'
+    
+    - condition: time
+      after: '07:00:00'
+      before: '23:00:00'
+  
+  action:
+    
+    - service: notify.telegramdepablo
+      data_template:
+        title: "Detección de presencia:"
+        message: >
+          {% if trigger.entity_id == 'device_tracker.natalia' %}
+            {% if is_state(trigger.entity_id, 'home') %}
+              {{ "Natalia ha llegado a casa" }}
+            {% else %}
+              {{ "Natalia ha salido de casa" }}
+            {% endif %}
+          {% elif trigger.entity_id == 'device_tracker.pablo' %}
+            {% if is_state(trigger.entity_id, 'home') %}
+              {{ "Pablo ha llegado a casa" }}
+            {% else %}
+              {{ "Pablo ha salido de casa" }}
+            {% endif %}
+          {% endif %}

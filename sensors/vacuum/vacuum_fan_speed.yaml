@@ -1,0 +1,8 @@
+- platform: template
+  sensors:
+    vacuum_fan_speed:
+      friendly_name: Fan Speed
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Modo: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.fan_speed }}'
+      icon_template: 'mdi:speedometer'

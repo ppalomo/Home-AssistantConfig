@@ -1,0 +1,23 @@
+###################################################
+#                                                 #
+#      Encendido TV comedor al despertarse        #
+#                                                 #
+###################################################
+
+alias: Encendido TV comedor al despertarse
+sequence:
+
+  - alias: Encender tv del comedor
+    service: switch.turn_on
+    data:
+      entity_id: switch.power_tv_comedor
+  
+  - delay:
+      seconds: 2
+  
+  # - alias: Poner el Disney Channel
+  #   service: switch.broadlink_send_packet_192_168_2_15
+  #   data:
+  #     packet:
+  #       - "JgCMAJSSFDYUNhQ2FBEUERQRFBEUERQ2FDYUNhQRFBEUERQRFBEUERQRFDYUERQRFBEUERQRFDYUNhQRFDYUNhQ2FDYUNhQABfWUkhQ2FDYUNhQRFBEUERQRFBEUNhQ2FDYUERQRFBEUERQRFBEUERQ2FBEUERQRFBEUERQ2FDYUERQ2FDYUNhQ2FDYUAA0FAAAAAAAAAAAAAAAA"
+  #       - "JgBGAJSTFDUUNhM2ExITEhMSExITEhM2EzYTNhQRFBEUERQRFBEUNRQ2ExITNhMSExITNhMSExITEhM2ExITNhQ1FBEUNhMADQUAAA=="

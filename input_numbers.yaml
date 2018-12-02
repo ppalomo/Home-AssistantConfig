@@ -1,0 +1,7 @@
+# Nest
+target_temperature:
+    name: Heating target temperature
+    initial: 22
+    min: 18
+    max: 25
+    step: 0.5

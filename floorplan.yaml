@@ -1,0 +1,262 @@
+name: Floorplan
+image: /local/custom_ui/floorplan/floorplan.svg
+stylesheet: /local/custom_ui/floorplan/floorplan.css
+
+####################################################
+#                                                  #
+#                     Enables                      #
+#                                                  #
+####################################################
+
+# These options are optional
+# warnings:                  # enable warnings (to find out why things might ot be working correctly)
+# pan_zoom:                  # enable experimental panning / zooming
+# hide_app_toolbar:          # hide the application toolbar (when used as a custom panel)
+# date_format: DD-MM-YYYY   # Date format to use in hover-over text
+
+# last_motion_entity: sensor.template_last_motion
+# last_motion_class: last-motion
+
+groups:
+
+####################################################
+#                                                  #
+#                 Date & time                      #
+#                                                  #
+####################################################
+
+    - name: DateTime
+      entities:
+         - sensor.time
+         - sensor.date
+      text_template: '${entity.state ? entity.state : "-"}'
+
+####################################################
+#                                                  #
+#                    Climate                       #
+#                                                  #
+####################################################
+
+    - name: Temperature
+      entities:
+         - sensor.nest_thermostat_temperature
+         - sensor.dark_sky_temperature
+         - sensor.nest_thermostat_target
+         - sensor.temperatura_dormitorio   
+      text_template: '${entity.state ? entity.state + "°C" : "-"}'
+      
+    - name: Humidity
+      entities:
+         - sensor.dark_sky_humidity
+         - sensor.nest_thermostat_humidity
+         - sensor.dark_sky_precip_probability
+         - sensor.humedad_dormitorio
+      text_template: '${entity.state ? entity.state + "%" : "-"}'
+      
+    - name: Wind
+      entities:
+         - sensor.dark_sky_wind_speed
+      text_template: '${entity.state ? entity.state + "km/h" : "-"}'
+    - name: Literals
+      entities:
+        - sensor.nest_thermostat_operation_mode
+      text_template: '${entity.state ? entity.state : "-"}'
+
+####################################################
+#                                                  #
+#                    Entities                      #
+#                                                  #
+####################################################
+
+    - name: Media Players
+      entities:
+        - media_player.comedor
+        - media_player.salita
+        - media_player.panasonic_viera_tv
+        - media_player.dormitorio
+        - switch.power_tv_comedor
+      states:
+        - state: 'playing'
+          class: 'device-on'
+        - state: 'on'
+          class: 'device-on'
+        - state: 'paused'
+          class: 'device-on'
+        - state: 'idle'
+          class: 'device-off'
+        - state: 'off'
+          class: 'device-off'
+
+    # VACUUM
+    - name: Vacuum
+      entities:
+        - vacuum.xiaomi_vacuum_cleaner
+      states:
+        - state: 'docked'
+          class: 'device-off'
+        - state: 'returning'
+          class: 'device-on'
+        - state: 'cleaning'
+          class: 'device-on'
+
+    # NEST    
+    - name: Nest
+      entities:
+        - climate.nest
+      states:
+        - state: 'off'
+          class: 'nest-off'
+        - state: 'eco'
+          class: 'nest-eco'
+        - state: 'heat'
+          class: 'nest-heat'
+
+####################################################
+#                                                  #
+#                    Lights                        #
+#                                                  #
+####################################################
+
+    - name: Lights
+      entities:
+        - switch.bola_comedor
+        - switch.cono_comedor
+        - switch.leds_cocina
+        - light.luz_gateway
+      states:
+        - state: 'off'
+          class: 'light-off'
+        - state: 'on'
+          class: 'light-on'
+      action:
+        domain: homeassistant
+        service: toggle
+
+    - name: Christmas Tree
+      entities:
+        - switch.arbol_navidad
+      states:
+        - state: 'off'
+          class: 'light-off'
+        - state: 'on'
+          class: 'nest-eco'
+      action:
+        domain: homeassistant
+        service: toggle
+
+####################################################
+#                                                  #
+#                Device tracker                    #
+#                                                  #
+####################################################
+
+    - name: Device tracer
+      entities:
+        - device_tracker.echodot
+        - device_tracker.housepc
+      states:
+        - state: 'not_home'
+          class: 'device-off'
+        - state: 'home'
+          class: 'device-on'
+
+####################################################
+#                                                  #
+#                      Scenes                      #
+#                                                  #
+####################################################
+
+    - name: Scenes
+      entities:
+        - scene.bed_time
+        - scene.home_away
+        - scene.tv_time
+        - scene.wakeup_time
+      action:
+        action: homeassistant.turn_on
+
+####################################################
+#                                                  #
+#                      Buttons                     #
+#                                                  #
+####################################################
+
+    - name: Button Nest Mode Off
+      entities:
+        - sensor.nest_mode_off
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: heating_set_mode_off
+
+    - name: Button Nest Mode Eco
+      entities:
+        - sensor.nest_mode_eco
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: heating_set_mode_eco
+
+    - name: Button Nest Mode Heat 20
+      entities:
+        - sensor.nest_mode_heat_20
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: set_heating_temperature_20
+
+    - name: Button Nest Mode Heat 21
+      entities:
+        - sensor.nest_mode_heat_21
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: set_heating_temperature_21
+
+    - name: Button Nest Mode Heat 22
+      entities:
+        - sensor.nest_mode_heat_22
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: set_heating_temperature_22
+
+    - name: Button Nest Mode Heat 23
+      entities:
+        - sensor.nest_mode_heat_23
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: set_heating_temperature_23
+
+    - name: Button Nest Mode Heat 24
+      entities:
+        - sensor.nest_mode_heat_24
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: set_heating_temperature_24
+
+    - name: Button Nest Mode Heat 25
+      entities:
+        - sensor.nest_mode_heat_25
+      states:
+        - state: 'on'
+          class: 'device-on'
+      action:
+        domain: script
+        service: set_heating_temperature_25

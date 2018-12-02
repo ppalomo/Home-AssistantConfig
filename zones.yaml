@@ -1,0 +1,17 @@
+  - name: Colegio
+    latitude: 41.104847
+    longitude: 1.144704
+    radius: 150
+    icon: mdi:school
+    
+  - name: Trabajo Pablo
+    latitude: 41.154361
+    longitude: 1.148811
+    radius: 200
+    icon: mdi:briefcase
+    
+  - name: Trabajo Natalia
+    latitude: 41.144392
+    longitude: 1.147690
+    radius: 200
+    icon: mdi:briefcase

@@ -1,0 +1,8 @@
+alias: Pon la calefacción a 22
+sequence:
+- service: climate.set_operation_mode
+  data:
+    operation_mode: heat
+- service: climate.set_temperature
+  data:
+    temperature: '22'

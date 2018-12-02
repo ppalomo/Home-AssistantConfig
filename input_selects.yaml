@@ -1,0 +1,39 @@
+# Rooms
+rooms:
+  name: Rooms
+  options:
+    - Todas
+    - Cocina
+    - Recibidor
+    - Comedor
+    - Pasillo
+    - Despacho
+    - Alma
+    - Salita
+    - Aseo
+    - Ducha
+    - Baño
+    - Dormitorio
+  initial: 'Todas'
+
+# Calendar
+seasons:
+  name: Estaciones
+  icon: mdi:calendar-question
+  options:
+    - Primavera
+    - Verano
+    - Otoño
+    - Invierno
+    - Navidad
+    - Halloween
+
+# Thermostat
+thermostat_mode:
+  name: Thermostat Mode
+  options:
+    - Off
+    - Eco
+    - On
+  initial: Off
+  icon: mdi:thermostat-box

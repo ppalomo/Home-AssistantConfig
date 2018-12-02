@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    vacuum_sensordirtyleft:
+      friendly_name: Replace filter
+      unit_of_measurement: 'h'
+      entity_id:
+        - vacuum.xiaomi_vacuum_cleaner
+      value_template: 'Sensor: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.sensor_dirty_left }}'
+      icon_template: 'mdi:screwdriver'

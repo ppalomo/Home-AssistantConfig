@@ -1,0 +1,81 @@
+####################################################
+#                                                  #
+#                    Heating                       #
+#                                                  #
+####################################################
+
+sensor.nest_thermostat_target:
+  friendly_name: Temperatura de la calefacción
+input_boolean.notify_thermostat:
+  friendly_name: Notificaciones de termostato
+
+####################################################
+#                                                  #
+#                     Lights                       #
+#                                                  #
+####################################################
+
+# switch.luz_ambiente_comedor_1:
+#   friendly_name: Bola del comedor
+
+switch.cono_comedor:
+  friendly_name: Cono del comedor
+
+switch.arbol_navidad:
+  friendly_name: Árbol de Navidad
+
+####################################################
+#                                                  #
+#                    Vacuum                        #
+#                                                  #
+####################################################
+
+input_boolean.daily_vacuum:
+  friendly_name: Limpieza diaria
+
+####################################################
+#                                                  #
+#                    Weather                       #
+#                                                  #
+####################################################
+
+sensor.dark_sky_temperature:
+  friendly_name: Temperatura exterior
+
+sensor.dark_sky_humidity:
+  friendly_name: Humedad relativa exterior
+
+sensor.dark_sky_precip_intensity:
+  friendly_name: Precipitación
+
+sensor.dark_sky_wind_speed:
+  friendly_name: Velocidad del viento
+
+####################################################
+#                                                  #
+#      Customizing all entities in a domain        #
+#                                                  #
+####################################################
+
+# customize_domain:
+#   light:
+#     icon: mdi:lightbulb-on-outline
+#   automation:
+#     initial_state: 'on'
+
+####################################################
+#                                                  #
+#     Customize entities matching a pattern        #
+#                                                  #
+####################################################
+
+# customize_glob:
+#   "switch.luz_*":
+#     icon: mdi:lightbulb-outline
+
+#  "light.kitchen_*":
+#    icon: mdi:description
+#  "scene.month_*_colors":
+#    hidden: true
+#    emulated_hue_hidden: false
+#    homebridge_hidden: true

@@ -1,0 +1,37 @@
+###################################################
+#                                                 #
+#      bla bla bla        #
+#                                                 #
+###################################################
+- alias: Bla bla bla
+
+  trigger:
+    
+    - platform: event
+      event_type: xiaomi_aqara.movement
+      event_data:
+        entity_id: binary_sensor.sensor_vibracion
+        movement_type: vibrate
+        #movement_type: vibrate/tilt/free_fall [choose one]
+        
+    - platform: event
+      event_type: xiaomi_aqara.movement
+      event_data:
+        entity_id: binary_sensor.sensor_vibracion
+        movement_type: free_fall
+        #movement_type: vibrate/tilt/free_fall [choose one]
+        
+    - platform: event
+      event_type: xiaomi_aqara.movement
+      event_data:
+        entity_id: binary_sensor.sensor_vibracion
+        movement_type: tilt
+        #movement_type: vibrate/tilt/free_fall [choose one]
+    
+  action:
+    
+    - service: notify.telegramdepablo
+      data:
+        title: "Sensor vibración:"
+        message: |
+          detectado

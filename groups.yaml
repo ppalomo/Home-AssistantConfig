@@ -1,0 +1,64 @@
+####################################################
+#                                                  #
+#                      Luces                       #
+#                                                  #
+####################################################
+
+luces_comedor:
+  name: Luces del comedor
+  icon: mdi:lightbulb-outline
+  entities:
+    - switch.cono_comedor
+    - switch.arbol_navidad
+    - switch.bola_comedor
+    
+luces_cocina:
+  name: Luces de la cocina
+  icon: mdi:lightbulb-outline
+  entities:
+    - switch.leds_cocina
+
+#cono_comedor:
+#  name: Cono del comedor
+#  entities:
+#    - switch.cono_comedor
+
+# lights_office:
+#   name: Luces del despacho
+#   entities:
+#     - switch.arbol
+
+#arbol_navidad:
+#  name: Árbol de Navidad
+#  entities:
+#    - switch.arbol_navidad
+
+####################################################
+#                                                  #
+#                        TV                        #
+#                                                  #
+####################################################
+
+tv:
+  name: Media Players
+  icon: mdi:tv
+  entities:
+    - media_player.comedor
+    - media_player.salita
+    - media_player.panasonic_viera_tv
+    - media_player.dormitorio
+  view: false
+
+####################################################
+#                                                  #
+#                    Familia                       #
+#                                                  #
+####################################################
+
+family:
+  name: Familia
+  icon: mdi:group
+  entities:
+    - device_tracker.natalia
+    - device_tracker.pablo
+  view: false

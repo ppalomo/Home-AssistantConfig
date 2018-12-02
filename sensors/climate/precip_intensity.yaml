@@ -1,0 +1,25 @@
+- platform: template
+  sensors:
+    precip_intensity:
+      value_template: >-
+        {% if float(states.sensor.dark_sky_precip_intensity.state) >= 0.5 -%}
+          {% if float(states.sensor.dark_sky_precip_intensity.state) <= 2 -%}
+            lluvia débil
+          {%- else -%}
+            {% if float(states.sensor.dark_sky_precip_intensity.state) <= 15 -%}
+              lluvia moderada
+            {%- else -%}
+              {% if float(states.sensor.dark_sky_precip_intensity.state) <= 30 -%}
+                lluvia fuerte
+              {%- else -%}
+                {% if float(states.sensor.dark_sky_precip_intensity.state) <= 60 -%}
+                  lluvia muy fuerte
+                {%- else -%}
+                  lluvia torrencial
+                {%- endif %}
+              {%- endif %}
+            {%- endif %}
+          {%- endif %}
+        {%- else -%}
+          no
+        {%- endif %}

@@ -1,0 +1,27 @@
+# Notificación que se envía al finalizar la limpieza
+- alias: La roomba ha acabado de limpiar
+
+  trigger:
+    
+    - platform: state
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+      from: cleaning
+      
+  condition:
+
+    - condition: state
+      entity_id: input_boolean.notify_vacuum
+      state: 'on'
+  
+  action:
+    
+    - service: notify.telegramdepablo
+      data:
+        title: "Roomba:"
+        message: |
+          Se ha finalizado la limpieza
+          - Tiempo dedicado: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time }} min
+          - Área limpiada: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaned_area }} m²
+          - Cambio filtro: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.filter_left }} h
+          - Cambio escobilla 1: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.main_brush_left }} h
+          - Cambio escobilla 2: {{ states.vacuum.xiaomi_vacuum_cleaner.attributes.side_brush_left }} h

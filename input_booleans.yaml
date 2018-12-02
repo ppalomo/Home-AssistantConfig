@@ -1,0 +1,31 @@
+# Notifications
+notify_presence:
+  name: Notificaciones de presencia
+  icon: mdi:bell-ring
+  initial: off
+
+notify_thermostat:
+  name: Notificaciones de termostato
+  icon: mdi:radiator
+  initial: on
+  
+notify_vacuum:
+  name: Notificaciones de limpieza
+  icon: mdi:robot-vacuum
+  initial: on
+  
+notify_weather:
+  name: Notificaciones del tiempo
+  icon: mdi:weather-pouring
+  initial: on
+  
+notify_lights:
+  name: Notificaciones de luces
+  icon: mdi:lightbulb-on-outline
+  initial: on
+
+# Vacuum
+daily_vacuum:
+  name: Limpieza diaria
+  icon: mdi:robot-vacuum
+  initial: off

@@ -1,0 +1,26 @@
+# Automation para días de lluvia
+- alias: Alerta de lluvia
+
+  trigger:
+    
+    - platform: state
+      entity_id: sensor.precip_intensity
+      from: 'no'
+      
+  condition:
+
+    - condition: state
+      entity_id: input_boolean.notify_weather
+      state: 'on'
+  
+  action:
+    
+    - service: notify.telegramdepablo
+      data:
+        title: "Tiempo:"
+        message: |
+          Aviso de {{ states.sensor.precip_intensity.state }}
+          - Covertura de nubes: {{ states.sensor.dark_sky_cloud_coverage.state }}%
+          - Intensidad de lluvia: {{ states.sensor.dark_sky_precip_intensity.state }}mm/h
+          - Temperatura exterior: {{ states.sensor.dark_sky_temperature.state }}°C
+          - {{ states.sensor.dark_sky_daily_summary.state }}

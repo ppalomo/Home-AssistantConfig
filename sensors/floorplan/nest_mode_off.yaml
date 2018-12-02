@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    nest_mode_off:
+      value_template: >-
+        {% if is_state('sensor.nest_thermostat_operation_mode', 'off') %}
+          on
+        {% else %}
+          off
+        {% endif %}
