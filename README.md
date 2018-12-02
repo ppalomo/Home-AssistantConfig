@@ -29,6 +29,10 @@ These are the devices I use:
 
 | [Go to Menu](#menu) |
 
+I use [Floorplan](https://github.com/pkozul/ha-floorplan) project to interact with all my entities and extend my user interface by adding my own visuals.
+
+![UI](www/images/floorplan.png?raw=true "Floorplan")
+
 ## Useful links
 
 * [Installing Hass.io](https://www.home-assistant.io/hassio/installation/)
