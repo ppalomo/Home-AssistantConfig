@@ -1510,15 +1510,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="586.15055"
-     inkscape:cy="503.84759"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="493.83579"
+     inkscape:cy="416.5127"
      inkscape:document-units="mm"
      inkscape:current-layer="layer7"
      showgrid="false"
      units="px"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -4391,21 +4391,22 @@
            style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">from the Noun Project</text>
       </g>
       <g
-         id="g96921-7-3-6-6-9-7-4"
+         id="switch.lampara_salita"
          transform="matrix(0.13797701,0,0,0.13797701,218.08672,51.00136)"
          clip-path="url(#clipPath96925-6-0-4-9-3-6-9-0)"
-         style="display:inline;fill:#ececec">
+         style="display:inline;fill:#b3b3b3"
+         inkscape:label="switch.lampara_salita">
         <g
            id="g96903-0-5-4-5-9-1-2"
            transform="translate(0,-952.36218)"
-           style="fill:#ececec">
+           style="fill:#b3b3b3">
           <path
              id="path96901-4-1-6-3-7-5-9"
              overflow="visible"
              display="inline"
              visibility="visible"
              marker="none"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ececec;enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#b3b3b3;enable-background:accumulate"
              d="m 50,963.36219 c -12.1952,0 -24,9.46145 -24,22.84375 0,17.36386 13,20.99996 13,33.15626 h 22 c 0,-12.1563 13,-15.7924 13,-33.15626 0,-13.3823 -11.8048,-22.84375 -24,-22.84375 z m -2.2188,5.125 c 1.3033,-0.0617 2.4088,0.60054 2.375,1.90625 0.033,1.0472 -0.8903,2.02978 -1.9374,2.0625 C 40.7587,973.32604 35,979.64873 35,987.36217 c 0,1.5362 0.2281,3.0114 0.6562,4.4063 0.4167,1.0266 -0.221,2.3347 -1.2812,2.6562 -1.0602,0.3216 -2.3074,-0.4149 -2.5312,-1.5 -0.5424,-1.7653 -0.8438,-3.6203 -0.8438,-5.5625 0,-9.71732 7.3396,-17.77368 16.7812,-18.87498 z M 39,1023.3622 v 4 h 22 v -4 z m 0,8 c 0,2.2981 1.8895,4 4,4 h 14 c 2.1105,0 4,-1.7019 4,-4 z m 7,6 c 0,2.216 1.784,4 4,4 2.216,0 4,-1.784 4,-4 z"
              inkscape:connector-curvature="0" />
         </g>
@@ -4415,31 +4416,32 @@
            font-size="5px"
            y="115"
            x="0"
-           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">Created by Numero Uno</text>
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#b3b3b3">Created by Numero Uno</text>
         <text
            id="text96907-6-1-8-5-8-5-4"
            font-weight="bold"
            font-size="5px"
            y="120"
            x="0"
-           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">from the Noun Project</text>
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#b3b3b3">from the Noun Project</text>
       </g>
       <g
-         id="g96921-7-3-6-6-9-7-4-3"
+         id="switch.bola_salita"
          transform="matrix(0.13797701,0,0,0.13797701,220.80779,19.969357)"
          clip-path="url(#clipPath96925-6-0-4-9-3-6-9-0-1)"
-         style="display:inline;fill:#ececec">
+         style="display:inline;fill:#b3b3b3"
+         inkscape:label="switch.bola_salita">
         <g
            id="g96903-0-5-4-5-9-1-2-6"
            transform="translate(0,-952.36218)"
-           style="fill:#ececec">
+           style="fill:#b3b3b3">
           <path
              id="path96901-4-1-6-3-7-5-9-3"
              overflow="visible"
              display="inline"
              visibility="visible"
              marker="none"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ececec;enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#b3b3b3;enable-background:accumulate"
              d="m 50,963.36219 c -12.1952,0 -24,9.46145 -24,22.84375 0,17.36386 13,20.99996 13,33.15626 h 22 c 0,-12.1563 13,-15.7924 13,-33.15626 0,-13.3823 -11.8048,-22.84375 -24,-22.84375 z m -2.2188,5.125 c 1.3033,-0.0617 2.4088,0.60054 2.375,1.90625 0.033,1.0472 -0.8903,2.02978 -1.9374,2.0625 C 40.7587,973.32604 35,979.64873 35,987.36217 c 0,1.5362 0.2281,3.0114 0.6562,4.4063 0.4167,1.0266 -0.221,2.3347 -1.2812,2.6562 -1.0602,0.3216 -2.3074,-0.4149 -2.5312,-1.5 -0.5424,-1.7653 -0.8438,-3.6203 -0.8438,-5.5625 0,-9.71732 7.3396,-17.77368 16.7812,-18.87498 z M 39,1023.3622 v 4 h 22 v -4 z m 0,8 c 0,2.2981 1.8895,4 4,4 h 14 c 2.1105,0 4,-1.7019 4,-4 z m 7,6 c 0,2.216 1.784,4 4,4 2.216,0 4,-1.784 4,-4 z"
              inkscape:connector-curvature="0" />
         </g>
@@ -4449,14 +4451,14 @@
            font-size="5px"
            y="115"
            x="0"
-           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">Created by Numero Uno</text>
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#b3b3b3">Created by Numero Uno</text>
         <text
            id="text96907-6-1-8-5-8-5-4-7"
            font-weight="bold"
            font-size="5px"
            y="120"
            x="0"
-           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">from the Noun Project</text>
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#b3b3b3">from the Noun Project</text>
       </g>
       <g
          id="switch.bola_comedor"

@@ -306,6 +306,10 @@ views:
     #icon: mdi:lightbulb
     cards:
       
+      # - type: entities
+      #   title: Comedor
+      #   entities:
+          
       - type: glance
         entities:
           - entity: sensor.nest_thermostat_temperature
@@ -387,6 +391,27 @@ views:
             name: Humedad
           - entity: sensor.presion_dormitorio
             name: Presión
+
+####################################################
+#                                                  #
+#                     Cocina                       #
+#                                                  #
+####################################################
+
+  - id: cocina
+    title: Cocina
+    cards:
+
+      - type: vertical-stack
+        title: Luces
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: "custom:button-card"
+                icon: mdi:lightbulb
+                entity: switch.leds_cocina
+                name: Leds TV
+                color: rgb(255, 204, 97)
 
 ####################################################
 #                                                  #

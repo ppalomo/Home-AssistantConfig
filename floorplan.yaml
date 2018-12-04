@@ -123,6 +123,8 @@ groups:
         - switch.cono_comedor
         - switch.leds_cocina
         - light.luz_gateway
+        - switch.bola_salita
+        - switch.lampara_pie_salita
       states:
         - state: 'off'
           class: 'light-off'

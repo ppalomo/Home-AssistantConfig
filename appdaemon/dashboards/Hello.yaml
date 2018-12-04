@@ -1,0 +1,52 @@
+###################################################
+#                                                 #
+#                    Dashboard                    #
+#                                                 #
+###################################################
+
+title: My Smart Home
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+columns: 8
+
+###################################################
+#                                                 #
+#                      Layout                     #
+#                                                 #
+###################################################
+    
+layout:
+    - clock.clock(2x1), weather.weather(2x2)
+
+###################################################
+#                                                 #
+#              Widgets definition                 #
+#                                                 #
+###################################################
+
+clock:
+    widget_type: clock
+
+weather:
+    widget_type: weather
+    units: "&deg;C"
+    # title: Today
+    # show_forecast: 1
+    # forecast_title: Tomorrow
+    # prefer_icons: 1
+    # sensors:
+    #     icon: sensor.dark_sky_icon
+    #     temperature: sensor.dark_sky_temperature
+    #     temperature_max: sensor.dark_sky_daytime_high_temperature
+    #     temperature_min: sensor.dark_sky_overnight_low_temperature
+    #     apparent_temperature: sensor.dark_sky_apparent_temperature
+    #     humidity: sensor.dark_sky_humidity
+    #     precip_probability: sensor.dark_sky_precip_probability
+    #     precip_intensity: sensor.dark_sky_precip_intensity
+    #     precip_type: sensor.dark_sky_precip
+    #     pressure: sensor.dark_sky_pressure
+    #     wind_speed: sensor.dark_sky_wind_speed
+    #     wind_bearing: sensor.dark_sky_wind_bearing
+    #     forecast_icon: sensor.dark_sky_icon_1
+    #     forecast_temperature_min: sensor.dark_sky_overnight_low_temperature_1
+    #     forecast_temperature_max: sensor.dark_sky_daytime_high_temperature_1
