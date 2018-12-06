@@ -141,19 +141,11 @@ alexa:
         - switch.lampara_pie_salita # Alexa, enciende/apaga la lampara de pie de la salita
         - sensor.temperatura_dormitorio # Alexa, dime la temperatura del dormitorio
         - script.turn_on_livingroom_ambient_lights # Alexa, enciende las luces de ambiente del comedor
-        - script.turn_off_livingroom_lights 
-        - script.wakeup_time
+        - script.turn_off_livingroom_lights
+        - script.turn_on_gamesroom_ambient_lights
       # include_domains:
       #   - switch
       exclude_entities:
-        - group.all_automations
-        - group.all_scripts
-        - group.all_switches
-        - group.all_vacuum_cleaners
-        - group.calendar
-        - group.family
-        - group.tv
-        - sensor.dark_sky_daytime_high_apparent_temperature
       exclude_domains:
         - automation
         - climate

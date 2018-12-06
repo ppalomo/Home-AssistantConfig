@@ -1,0 +1,15 @@
+###################################################
+#                                                 #
+#              Apagar luces salita                #
+#                                                 #
+###################################################
+
+alias: Apagar luces salita
+sequence:
+
+  - alias: Apagar luces salita
+    service: switch.turn_off
+    data:
+      entity_id: 
+        - switch.bola_salita
+        - switch.lampara_pie_salita

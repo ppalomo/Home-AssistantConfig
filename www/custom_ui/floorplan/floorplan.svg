@@ -1510,9 +1510,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="493.83579"
-     inkscape:cy="416.5127"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="468.67731"
+     inkscape:cy="493.6384"
      inkscape:document-units="mm"
      inkscape:current-layer="layer7"
      showgrid="false"
@@ -4391,11 +4391,11 @@
            style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">from the Noun Project</text>
       </g>
       <g
-         id="switch.lampara_salita"
+         id="switch.lampara_pie_salita"
          transform="matrix(0.13797701,0,0,0.13797701,218.08672,51.00136)"
          clip-path="url(#clipPath96925-6-0-4-9-3-6-9-0)"
          style="display:inline;fill:#b3b3b3"
-         inkscape:label="switch.lampara_salita">
+         inkscape:label="switch.lampara_pie_salita">
         <g
            id="g96903-0-5-4-5-9-1-2"
            transform="translate(0,-952.36218)"

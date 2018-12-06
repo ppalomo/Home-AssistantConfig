@@ -1,0 +1,35 @@
+###################################################
+#                                                 #
+#               Dashboard top panel               #
+#                                                 #
+###################################################
+
+layout:
+    - load_main_panel, load_lights_panel, load_settings_panel
+
+###################################################
+#                                                 #
+#                     Widgets                     #
+#                                                 #
+###################################################
+
+load_main_panel:
+    widget_type: navigate
+    title: General
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /dashboard
+    
+load_lights_panel:
+    widget_type: navigate
+    title: Luces
+    icon_active: fa-lightbulb
+    icon_inactive: fa-lightbulb
+    url: /lights
+    
+load_settings_panel:
+    widget_type: navigate
+    title: Luces
+    icon_active: fa-cog
+    icon_inactive: fa-cog
+    url: /settings

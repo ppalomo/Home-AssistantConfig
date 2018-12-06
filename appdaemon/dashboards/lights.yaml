@@ -1,0 +1,25 @@
+###################################################
+#                                                 #
+#                     Layout                      #
+#                                                 #
+###################################################
+
+layout:
+    - switch.bola_comedor, switch.cono_comedor, christmas_tree
+    - switch.leds_cocina
+    - switch.lampara_pie_salita, switch.bola_salita
+    - light.luz_gateway
+
+###################################################
+#                                                 #
+#                     Widgets                     #
+#                                                 #
+###################################################
+
+christmas_tree:
+    widget_type: switch
+    title: Árbol
+    entity: switch.arbol_navidad
+    icon_on: mdi-pine-tree
+    icon_off: mdi-pine-tree
+    warn: 1

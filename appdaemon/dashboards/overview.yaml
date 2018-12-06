@@ -1,0 +1,25 @@
+###################################################
+#                                                 #
+#                    Overview                     #
+#                                                 #
+###################################################
+
+layout:
+    - 
+    - 
+    - 
+    - 
+
+###################################################
+#                                                 #
+#                     Widgets                     #
+#                                                 #
+###################################################
+
+christmas_tree:
+    widget_type: switch
+    title: Árbol
+    entity: switch.arbol_navidad
+    icon_on: mdi-pine-tree
+    icon_off: mdi-pine-tree
+    warn: 1

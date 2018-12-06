@@ -12,15 +12,25 @@ sequence:
     entity_id:
       - script.turn_off_livingroom_lights
 
+  - alias: Apagar luces de la salita
+    service: script.turn_off
+    entity_id:
+      - script.turn_off_gamesroom_lights
+      
+  - alias: Apagar luces de la cocina
+    service: script.turn_off
+    entity_id:
+      - script.turn_off_kitchen_lights
+
   - alias: Apagar media players
     service: media_player.turn_off
     data:
       entity_id: group.tv
 
-  - delay:
-      seconds: 2
+  # - delay:
+  #     seconds: 2
           
-  - alias: Apagar corriente tv del comedor
-    service: switch.turn_off
-    data:
-      entity_id: switch.power_tv_comedor
+  # - alias: Apagar corriente tv del comedor
+  #   service: switch.turn_off
+  #   data:
+  #     entity_id: switch.power_tv_comedor

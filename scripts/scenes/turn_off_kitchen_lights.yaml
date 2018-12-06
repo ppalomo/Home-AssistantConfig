@@ -1,0 +1,14 @@
+###################################################
+#                                                 #
+#              Apagar luces cocina                #
+#                                                 #
+###################################################
+
+alias: Apagar luces cocina
+sequence:
+
+  - alias: Apagar luces cocina
+    service: switch.turn_off
+    data:
+      entity_id: 
+        - switch.leds_cocina

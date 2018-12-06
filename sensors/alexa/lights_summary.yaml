@@ -7,7 +7,7 @@
           Las siguientes luces están encendidas.
           {% for state in states.switch -%}
             {% if state.state == 'on' %}
-              {{state.name}}
+              {{state.name}}.
             {% endif %}
           {%- endfor %}
         {%- else -%}

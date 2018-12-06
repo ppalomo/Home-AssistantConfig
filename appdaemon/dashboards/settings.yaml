@@ -1,0 +1,19 @@
+###################################################
+#                                                 #
+#                     Layout                      #
+#                                                 #
+###################################################
+
+layout:
+    - input_boolean.gateway_light_night_mode, input_boolean.daily_vacuum
+    - input_boolean.notify_presence, input_boolean.notify_thermostat, input_boolean.notify_vacuum, input_boolean.notify_weather, input_boolean.notify_lights
+    - 
+    - 
+
+###################################################
+#                                                 #
+#                     Widgets                     #
+#                                                 #
+###################################################
+
+

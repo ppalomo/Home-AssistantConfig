@@ -1,21 +1,3 @@
-# Rooms
-rooms:
-  name: Rooms
-  options:
-    - Todas
-    - Cocina
-    - Recibidor
-    - Comedor
-    - Pasillo
-    - Despacho
-    - Alma
-    - Salita
-    - Aseo
-    - Ducha
-    - Baño
-    - Dormitorio
-  initial: 'Todas'
-
 # Calendar
 seasons:
   name: Estaciones

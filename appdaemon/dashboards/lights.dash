@@ -1,0 +1,25 @@
+###################################################
+#                                                 #
+#                     Lights                      #
+#                                                 #
+###################################################
+
+title: My Smart Home - Lights
+widget_dimensions: [120, 120]
+widget_margins: [5, 5]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+###################################################
+#                                                 #
+#                      Layout                     #
+#                                                 #
+###################################################
+    
+layout:
+    - include: top_panel
+    - include: lights
+    - include: bottom_panel

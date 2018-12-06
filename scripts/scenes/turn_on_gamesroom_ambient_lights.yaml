@@ -1,0 +1,15 @@
+###################################################
+#                                                 #
+#          Luces ambiente de la salita            #
+#                                                 #
+###################################################
+
+alias: Luces ambiente de la salita
+sequence:
+
+  - alias: Luces ambiente de la salita
+    service: switch.turn_on
+    data:
+      entity_id: 
+        - switch.bola_salita
+        - switch.lampara_pie_salita

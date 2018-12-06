@@ -1,0 +1,29 @@
+###################################################
+#                                                 #
+#               Dashboard top panel               #
+#                                                 #
+###################################################
+
+layout:
+    - clock_space
+
+###################################################
+#                                                 #
+#                     Widgets                     #
+#                                                 #
+###################################################
+
+clock_space:
+    widget_type: clock
+    widget_style: "font-size: 200%"
+    time_format: 24hr
+    show_seconds: 1
+    date_style: "color: white"
+    time_style: "color: white"
+
+header:
+    widget_type: label
+    title: My Smart Home 
+    title_style: "font-size: 150%; line-height: 200%; color: white;"
+    title2: Panel de control
+    title2_style: "font-size: 100%; line-height: 300%; color: #DDDDDD"
