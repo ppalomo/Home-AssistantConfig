@@ -5,19 +5,24 @@
 ###################################################
 
 homeassistant:
+  
   # Name of the location where Home Assistant is running
   name: Home
+  
   # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude
   longitude: !secret longitude
+  
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 39
-  # metric for Metric, imperial for Imperial
+  elevation: !secret elevation
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Madrid
+  
   # Customization file
   customize: !include customize.yaml
+  customize_domain:
+    switch:
+      icon: mdi:lightbulb-on-outline
 
 ####################################################
 #                                                  #
@@ -108,13 +113,13 @@ panel_custom:
 logger:
   default: warning
   logs:
-    homeassistant.components.device_tracker: debug
+    homeassistant.components.device_tracker: warning
 
 influxdb:
-  host: a0d7b954-influxdb
-  port: 8086
-  database: homeassistant
-  username: homeassistant
+  host: !secret influxdb_host
+  port: !secret influxdb_port
+  database: !secret influxdb_database
+  username: !secret influxdb_username
   password: !secret api_password
   max_retries: 3
   default_measurement: state
@@ -139,13 +144,14 @@ alexa:
         - switch.leds_cocina # Alexa enciende/apaga los leds de la cocina
         - switch.bola_salita # Alexa, enciende/apaga la bola de la salita
         - switch.lampara_pie_salita # Alexa, enciende/apaga la lampara de pie de la salita
+        - switch.sonoff02 # Alexa, enciende/apaga la piedra del despacho
         - sensor.temperatura_dormitorio # Alexa, dime la temperatura del dormitorio
         - script.turn_on_livingroom_ambient_lights # Alexa, enciende las luces de ambiente del comedor
         - script.turn_off_livingroom_lights
         - script.turn_on_gamesroom_ambient_lights
       # include_domains:
       #   - switch
-      exclude_entities:
+      # exclude_entities:
       exclude_domains:
         - automation
         - climate
@@ -162,7 +168,7 @@ alexa:
         
   flash_briefings:
     whoishome:
-      - title: Quién está en casa?
+      - title: Informe de situación de la casa
         text: >
           {{ states.sensor.summary.state }}
 
@@ -175,32 +181,6 @@ intent_script:
     speech:
       text: >
         {{ states.sensor.heating_summary.state }}
-
-#alexa:
-#  intents:
-#  # OCTOPRINT STATUS
-#  PrinterStatusIntent:
-#    speech:
-#      type: plaintext
-#      text: >
-#        The printer is {{ states("sensor.octoprint_current_state") | lower }}
-#        {% if is_state("binary_sensor.octoprint_printing", "on") %}
-#          and the job is {{ states("sensor.octoprint_job_percentage") | round }} percent complete
-#        {% else %}
-#          and not currently printing
-#        {% endif %}.
-
-# intent_script:
-#   ActivateSceneIntent:
-#     action:
-#       service: script.turn_on
-#       data_template:
-#         entity_id: script.{{ Scene | replace(" ", "_") }}
-#     speech:
-#       type: plain
-#       text: OK
-
-#emulated_hue:
 
 google:
   client_id: !secret google_id
@@ -232,6 +212,7 @@ telegram_bot:
       - !secret telegram_chat_id
 
 notify:
+
   - name: TelegramDePablo
     platform: telegram
     chat_id: !secret telegram_chat_id
@@ -250,7 +231,7 @@ ifttt:
 tuya:
   username: !secret tuya_username
   password: !secret tuya_password
-  country_code: 34
+  country_code: !secret tuya_country_code
   platform: 'tuya'
 
 # Xiaomi Gateways
@@ -282,6 +263,14 @@ xiaomi_aqara:
 #     - light
 #     - climate
 
+# history_graph:
+#   gr1:
+#     name: Evolución temperatura
+#     entities:
+#       - sensor.nest_thermostat_temperature
+#       - sensor.temperatura_dormitorio
+#     hours_to_show: 120
+
 ####################################################
 #                                                  #
 #                       MQTT                       #
@@ -292,6 +281,8 @@ mqtt:
   broker: core-mosquitto
   username: !secret mqtt_username
   password: !secret mqtt_password
+  #discovery: true
+  #discovery_prefix: homeassistant
 
 ####################################################
 #                                                  #
@@ -299,8 +290,11 @@ mqtt:
 #                                                  #
 ####################################################
 
-# setracker:
-# remotetv
+media_player:
+  - platform: alexa
+    email: !secret amazon_email
+    password: !secret amazon_password
+    url: "amazon.es"
 
 ####################################################
 #                                                  #
@@ -312,7 +306,7 @@ automation: !include_dir_merge_list automations
 #device_tracker: !include_dir_list device_tracker/
 input_number: !include input_numbers.yaml
 input_boolean: !include input_booleans.yaml
-input_select: !include input_selects.yaml
+#input_select: !include input_selects.yaml
 group: !include groups.yaml
 script: !include_dir_named scripts/
 scene: !include_dir_list scenes/

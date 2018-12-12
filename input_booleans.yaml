@@ -8,7 +8,7 @@ gateway_light_night_mode:
 notify_presence:
   name: Notificaciones de presencia
   icon: mdi:bell-ring
-  initial: off
+  initial: on
 
 notify_thermostat:
   name: Notificaciones de termostato
@@ -28,6 +28,11 @@ notify_weather:
 notify_lights:
   name: Notificaciones de luces
   icon: mdi:lightbulb-on-outline
+  initial: on
+  
+notify_vibration:
+  name: Notificaciones del sensor de vibración
+  icon: mdi:vibrate
   initial: on
 
 # Vacuum

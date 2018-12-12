@@ -1,0 +1,21 @@
+###################################################
+#                                                 #
+#           Puerta de entrada abierta             #
+#                                                 #
+###################################################
+
+- alias: Puerta de entrada abierta
+
+  trigger:
+    
+    - platform: state
+      entity_id: binary_sensor.puerta_entrada
+      to: 'on'
+  
+  action:
+    
+    - service: notify.telegramdepablo
+      data:
+        title: "Sensor de puerta:"
+        message: |
+          Se ha abierto la puerta de entrada

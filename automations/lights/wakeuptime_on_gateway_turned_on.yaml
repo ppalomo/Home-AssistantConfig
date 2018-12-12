@@ -1,0 +1,20 @@
+###################################################
+#                                                 #
+#    Encendido de luces al encender el Gateway    #
+#                                                 #
+###################################################
+
+- alias: Encendido de luces al encender el Gateway
+
+  trigger:
+
+    - platform: state
+      entity_id: light.luz_gateway
+      to: 'on'
+  
+  condition:
+  
+  action:
+    
+    - service: script.turn_on
+      entity_id: script.wakeup_time

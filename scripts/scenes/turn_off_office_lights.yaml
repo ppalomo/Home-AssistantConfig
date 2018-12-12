@@ -1,0 +1,14 @@
+###################################################
+#                                                 #
+#            Apagar luces despacho                #
+#                                                 #
+###################################################
+
+alias: Apagar luces despacho
+sequence:
+
+  - alias: Apagar luces despacho
+    service: switch.turn_off
+    data:
+      entity_id: 
+        - switch.sonoff02

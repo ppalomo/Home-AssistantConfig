@@ -1,0 +1,42 @@
+###################################################
+#                                                 #
+#                    IFTTT test                   #
+#                                                 #
+###################################################
+
+- alias: IFTTT test
+
+  trigger:
+  
+    - platform: event
+      event_type: ifttt_webhook_received
+      event_data:
+        action: call_service
+
+  # action:
+  
+  #   service: notify.telegramdepablo
+  #   data:
+  #     title: "IFTTT:"
+  #     message: |
+  #       - pruebaaaaaaaaaaaaaa
+  #       - holaaaaaaaaaaaaaaaa
+  
+  action:
+    service: notify.telegramdepablo
+    data_template:
+      title: "IFTTT"
+      message: '{{ trigger.event.data.message }}'
+  
+  # action:
+  
+  #   service: notify.telegramdepablo
+  #   data:
+  #     title: "IFTTT:"
+  #     #message: "Hola"
+  #     message: |
+  #       - pruebaaaaaaaaaaaaaa {{ trigger.event.data.entity_id }}
+  #       - holaaaaaaaaaaaaaaaa {{ trigger.event.data.service }}
+  #   # - service_template: '{{ trigger.event.data.service }}'
+  #   #   data_template:
+  #   #     entity_id: '{{ trigger.event.data.entity_id }}'

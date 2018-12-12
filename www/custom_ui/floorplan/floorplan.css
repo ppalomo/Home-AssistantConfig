@@ -28,6 +28,14 @@
   fill: #E74B3C !important;
 }
 
+.door-closed {
+  fill: #00ffff !important;
+}
+
+.door-open {
+  fill: #E74B3C !important;
+}
+
 /*** Fans ***/
 
 .fan-on {

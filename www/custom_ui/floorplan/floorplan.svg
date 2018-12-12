@@ -1502,6 +1502,28 @@
          x="-31.941517"
          y="-0.37364098" />
     </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask97251-5-9-9-5">
+      <rect
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.05639902;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect97253-8-5-5-0"
+         width="181.82745"
+         height="97.984795"
+         x="-31.941517"
+         y="-0.37364098" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask96986-8-9-0">
+      <rect
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.05639902;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect96988-64-5-4"
+         width="134.64285"
+         height="99.999992"
+         x="-10.899278"
+         y="-0.62460625" />
+    </mask>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1511,14 +1533,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70000001"
-     inkscape:cx="468.67731"
-     inkscape:cy="493.6384"
+     inkscape:cx="556.91354"
+     inkscape:cy="588.25881"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer7"
+     inkscape:current-layer="layer10"
      showgrid="false"
      units="px"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -1778,14 +1800,14 @@
      style="display:inline"
      transform="translate(0,39.6875)">
     <rect
-       style="fill:#00ffff;stroke-width:0.34838703"
+       style="fill:#999999;stroke-width:0.34838703"
        id="rect91242"
        width="13.561675"
        height="2.0958867"
        x="26.328365"
        y="0.86634272" />
     <rect
-       style="fill:#00ffff;stroke-width:0.42019358"
+       style="fill:#999999;stroke-width:0.42019358"
        id="rect91242-1"
        width="13.855673"
        height="2.9842038"
@@ -1799,84 +1821,84 @@
        x="14.366898"
        y="98.29084" />
     <rect
-       style="fill:#00ffff;stroke-width:0.37134466"
+       style="fill:#999999;stroke-width:0.37134466"
        id="rect91242-1-0-4"
        width="14.008469"
        height="2.3052649"
        x="122.64529"
        y="0.74429721" />
     <rect
-       style="fill:#00ffff;stroke-width:0.62376636"
+       style="fill:#999999;stroke-width:0.62376636"
        id="rect91242-1-0-4-2"
        width="44.399326"
        height="2.0522227"
        x="62.88879"
        y="0.73535556" />
     <rect
-       style="fill:#00ffff;stroke-width:0.41150048"
+       style="fill:#999999;stroke-width:0.41150048"
        id="rect91242-1-0-4-7"
        width="17.272396"
        height="2.2958591"
        x="162.18513"
        y="1.0568238" />
     <rect
-       style="fill:#00ffff;stroke-width:0.38262543"
+       style="fill:#999999;stroke-width:0.38262543"
        id="rect91242-1-0-4-7-1"
        width="16.706303"
        height="2.0522223"
        x="200.77449"
        y="0.91000766" />
     <rect
-       style="fill:#00ffff;stroke-width:0.36906195"
+       style="fill:#999999;stroke-width:0.36906195"
        id="rect91242-1-0-4-7-1-8"
        width="15.460645"
        height="2.0631385"
        x="247.23019"
        y="0.91001529" />
     <rect
-       style="fill:#00ffff;stroke-width:0.35099882"
+       style="fill:#999999;stroke-width:0.35099882"
        id="rect91242-1-0-4-7-1-8-6"
        width="13.910678"
        height="2.0740545"
        x="200.71863"
        y="64.943481" />
     <rect
-       style="fill:#00ffff;stroke-width:0.35470581"
+       style="fill:#999999;stroke-width:0.35470581"
        id="rect91242-1-0-4-7-1-8-6-4"
        width="14.058084"
        height="2.0958867"
        x="164.5847"
        y="64.98719" />
     <rect
-       style="fill:#00ffff;stroke-width:0.35346997"
+       style="fill:#999999;stroke-width:0.35346997"
        id="rect91242-1-0-4-7-1-8-6-4-8"
        width="13.960293"
        height="2.0958867"
        x="137.31323"
        y="64.921936" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.37232247"
+       style="display:inline;fill:#999999;stroke-width:0.37232247"
        id="rect91242-1-0-4-7-1-8-6-4-8-7"
        width="14.155878"
        height="2.2932906"
        x="146.65923"
        y="80.233284" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.38397461"
+       style="display:inline;fill:#999999;stroke-width:0.38397461"
        id="rect91242-1-0-4-7-1-8-6-4-8-7-9"
        width="13.862505"
        height="2.4906943"
        x="202.09018"
        y="80.653358" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.38868585"
+       style="display:inline;fill:#999999;stroke-width:0.38868585"
        id="rect91242-1-0-4-7-1-8-6-4-8-7-9-8"
        width="14.20477"
        height="2.4906943"
        x="234.71014"
        y="80.86216" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.31339562"
+       style="display:inline;fill:#999999;stroke-width:0.31339562"
        id="rect91242-1-0-4-7-1-8-6-4-8-7-9-8-9"
        width="10.007036"
        height="2.2984629"
@@ -1884,7 +1906,7 @@
        y="299.52045"
        transform="matrix(0.30843753,-0.9512446,0.99402463,0.10915603,0,0)" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.40808153"
+       style="display:inline;fill:#999999;stroke-width:0.40808153"
        id="rect91242-1-3"
        width="17.433495"
        height="2.2370026"
@@ -1892,7 +1914,7 @@
        y="-57.108788"
        transform="matrix(-6.0980438e-4,0.99999981,-0.99999497,0.00317129,0,0)" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.35066763"
+       style="display:inline;fill:#999999;stroke-width:0.35066763"
        id="rect91242-1-3-5"
        width="12.269888"
        height="2.3469722"
@@ -1900,7 +1922,7 @@
        y="-132.38785"
        transform="matrix(3.0289554e-4,0.99999995,-0.99999997,2.5894721e-4,0,0)" />
     <rect
-       style="display:inline;fill:#00ffff;stroke-width:0.35838181"
+       style="display:inline;fill:#999999;stroke-width:0.35838181"
        id="rect91242-1-3-5-5"
        width="12.815666"
        height="2.3469722"
@@ -4043,6 +4065,94 @@
            x="0"
            style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.01437713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">from the Noun Project</text>
       </g>
+      <rect
+         style="display:inline;opacity:1;fill:#546e7a;fill-opacity:1;stroke:none;stroke-width:0.07150647;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="scene.all_off-3-1-1"
+         width="30.649305"
+         height="21.286928"
+         x="160.73466"
+         y="4.6857653" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.08813429px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.14578369"
+         x="168.45847"
+         y="20.785921"
+         id="sensor.humedad_alma"
+         inkscape:label="sensor.humedad_alma"
+         transform="scale(1.0312428,0.96970374)"><tspan
+           sodipodi:role="line"
+           id="tspan96861-2-4"
+           x="168.45847"
+           y="20.785921"
+           style="stroke-width:0.14578369">HUMI</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.08823633px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.14578369"
+         x="168.53555"
+         y="13.628153"
+         id="sensor.temperatura_alma"
+         inkscape:label="sensor.temperatura_alma"
+         transform="scale(1.0312428,0.96970374)"><tspan
+           style="fill:#ffffff;stroke-width:0.14578369"
+           sodipodi:role="line"
+           id="tspan95853-0-8-6"
+           x="168.53555"
+           y="13.628153">TEMP</tspan></text>
+      <g
+         id="g96909-3-0"
+         transform="matrix(0.08060447,0,0,0.0757944,165.56695,8.25101)"
+         mask="url(#mask96986-8-9-0)"
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.05639901;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+        <path
+           id="path96889-93-9"
+           d="M 64,57.107 V 42.729 h 6.002 v -5 H 64 v -5 h 6.002 v -5 H 64 V 20.27 c 0,-7.732 -6.268,-14 -14,-14 -7.732,0 -14,6.268 -14,14 v 36.837 c -4.287,3.845 -7,9.409 -7,15.622 0,11.6 9.4,21 21,21 11.6,0 21,-9.4 21,-21 0,-6.212 -2.713,-11.777 -7,-15.622 z M 50,86.729 c -7.72,0 -14,-6.28 -14,-14 0,-3.952 1.703,-7.747 4.674,-10.411 L 43,60.232 V 57.107 20.271 c 0,-3.859 3.141,-7 7,-7 3.859,0 7,3.141 7,7 v 7.459 h -7 v 5 h 7 v 5 h -7 v 5 h 7 v 14.378 3.125 l 2.326,2.086 c 2.971,2.663 4.674,6.458 4.674,10.41 0,7.72 -6.28,14 -14,14 z"
+           inkscape:connector-curvature="0"
+           style="vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.05639901;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           id="path96891-9-2"
+           d="M 52,63.96 V 50.73 h -4 v 13.23 c -4.007,0.911 -7,4.487 -7,8.77 0,4.971 4.029,9 9,9 4.971,0 9,-4.029 9,-9 0,-4.283 -2.993,-7.859 -7,-8.77 z"
+           inkscape:connector-curvature="0"
+           style="vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.05639901;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text96893-9-9"
+           font-weight="bold"
+           font-size="5px"
+           y="115"
+           x="0"
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.05639901;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">Created by Tomas Knopp</text>
+        <text
+           id="text96895-5-8"
+           font-weight="bold"
+           font-size="5px"
+           y="120"
+           x="0"
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.05639901;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">from the Noun Project</text>
+      </g>
+      <g
+         id="g97247-3-0-0"
+         transform="matrix(0.07198004,0,0,0.07661544,166.07591,15.340542)"
+         mask="url(#mask97251-5-9-9-5)"
+         style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.01437713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+        <path
+           id="path97230-4-6-6"
+           d="M 50,7.5 C 41.652,28.945 20.5,46.947 20.5,63.155 20.5,79.36 33.709,92.5 50,92.5 66.29,92.5 79.5,79.36 79.5,63.155 79.5,46.947 58.348,29.114 50,7.5 Z M 36,54.724 c 0,-3.2 2.594,-5.792 5.795,-5.792 3.199,0 5.791,2.592 5.791,5.792 0,3.199 -2.592,5.794 -5.791,5.794 C 38.594,60.518 36,57.923 36,54.724 Z m 6.788,19.897 -3.921,-3.104 18.344,-23.173 3.921,3.104 z M 58.209,75 c -3.203,0 -5.795,-2.595 -5.795,-5.794 0,-3.2 2.592,-5.792 5.795,-5.792 3.198,0 5.791,2.592 5.791,5.792 C 64,72.405 61.407,75 58.209,75 Z"
+           inkscape:connector-curvature="0"
+           style="vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.01437713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           id="text97232-9-4-0"
+           font-weight="bold"
+           font-size="5px"
+           y="115"
+           x="0"
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.01437713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">Created by Tomas Knopp</text>
+        <text
+           id="text97234-9-6-2"
+           font-weight="bold"
+           font-size="5px"
+           y="120"
+           x="0"
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:0.01437713;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">from the Noun Project</text>
+      </g>
     </g>
     <g
        inkscape:groupmode="layer"
@@ -4324,7 +4434,7 @@
       </g>
       <g
          id="g96921-7-3-6-6-9"
-         transform="matrix(0.13797701,0,0,0.13797701,169.61441,26.338033)"
+         transform="matrix(0.13797701,0,0,0.13797701,169.48078,29.144363)"
          clip-path="url(#clipPath96925-6-0-4-9-3-6)"
          style="display:inline;fill:#ececec">
         <g
@@ -4837,22 +4947,22 @@
            style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#ececec">from the Noun Project</text>
       </g>
       <g
-         id="switch.luz_ambiente_despacho_1"
+         id="switch.sonoff02"
          transform="matrix(0.13797701,0,0,0.13797701,144.75695,15.232677)"
          clip-path="url(#clipPath96925-6-0-4-9-3-3)"
-         style="display:inline;fill:#e6e6e6"
-         inkscape:label="switch.luz_ambiente_despacho_1">
+         style="display:inline;fill:#b3b3b3"
+         inkscape:label="switch.sonoff02">
         <g
            id="g96903-0-5-4-5-95"
            transform="translate(0,-952.36218)"
-           style="fill:#e6e6e6">
+           style="fill:#b3b3b3">
           <path
              id="path96901-4-1-6-3-75"
              overflow="visible"
              display="inline"
              visibility="visible"
              marker="none"
-             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#e6e6e6;enable-background:accumulate"
+             style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#b3b3b3;enable-background:accumulate"
              d="m 50,963.36219 c -12.1952,0 -24,9.46145 -24,22.84375 0,17.36386 13,20.99996 13,33.15626 h 22 c 0,-12.1563 13,-15.7924 13,-33.15626 0,-13.3823 -11.8048,-22.84375 -24,-22.84375 z m -2.2188,5.125 c 1.3033,-0.0617 2.4088,0.60054 2.375,1.90625 0.033,1.0472 -0.8903,2.02978 -1.9374,2.0625 C 40.7587,973.32604 35,979.64873 35,987.36217 c 0,1.5362 0.2281,3.0114 0.6562,4.4063 0.4167,1.0266 -0.221,2.3347 -1.2812,2.6562 -1.0602,0.3216 -2.3074,-0.4149 -2.5312,-1.5 -0.5424,-1.7653 -0.8438,-3.6203 -0.8438,-5.5625 0,-9.71732 7.3396,-17.77368 16.7812,-18.87498 z M 39,1023.3622 v 4 h 22 v -4 z m 0,8 c 0,2.2981 1.8895,4 4,4 h 14 c 2.1105,0 4,-1.7019 4,-4 z m 7,6 c 0,2.216 1.784,4 4,4 2.216,0 4,-1.784 4,-4 z"
              inkscape:connector-curvature="0" />
         </g>
@@ -4862,14 +4972,14 @@
            font-size="5px"
            y="115"
            x="0"
-           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#e6e6e6">Created by Numero Uno</text>
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#b3b3b3">Created by Numero Uno</text>
         <text
            id="text96907-6-1-8-5-1"
            font-weight="bold"
            font-size="5px"
            y="120"
            x="0"
-           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#e6e6e6">from the Noun Project</text>
+           style="font-weight:bold;font-size:5px;font-family:'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif;fill:#b3b3b3">from the Noun Project</text>
       </g>
       <g
          style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;fill:#b3b3b3;font-variant-east_asian:normal;opacity:1;vector-effect:none;fill-opacity:1;stroke-width:3.26871901;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"

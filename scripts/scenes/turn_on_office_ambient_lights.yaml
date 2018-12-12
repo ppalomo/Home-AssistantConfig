@@ -1,0 +1,14 @@
+###################################################
+#                                                 #
+#            Luces ambiente despacho              #
+#                                                 #
+###################################################
+
+alias: Luces ambiente despacho
+sequence:
+
+  - alias: Encender luces ambiente despacho
+    service: switch.turn_on
+    data:
+      entity_id: 
+        - switch.sonoff02

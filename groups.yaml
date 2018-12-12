@@ -18,20 +18,24 @@ luces_cocina:
   entities:
     - switch.leds_cocina
 
-#cono_comedor:
-#  name: Cono del comedor
-#  entities:
-#    - switch.cono_comedor
+luces_despacho:
+  name: Luces del despacho
+  icon: mdi:lightbulb-outline
+  entities:
+    - switch.sonoff02
 
-# lights_office:
-#   name: Luces del despacho
-#   entities:
-#     - switch.arbol
+luces_salita:
+  name: Luces de la salita
+  icon: mdi:lightbulb-outline
+  entities:
+    - switch.bola_salita
+    - switch.lampara_pie_salita
 
-#arbol_navidad:
-#  name: Árbol de Navidad
-#  entities:
-#    - switch.arbol_navidad
+luces_aseo:
+  name: Luces del aseo
+  icon: mdi:lightbulb-outline
+  entities:
+    - light.luz_gateway
 
 ####################################################
 #                                                  #

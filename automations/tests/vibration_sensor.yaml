@@ -1,10 +1,10 @@
 ###################################################
 #                                                 #
-#      bla bla bla        #
+#              Alerta de vabración                #
 #                                                 #
 ###################################################
 
-- alias: Bla bla bla
+- alias: Alerta de vabración
 
   trigger:
     
@@ -13,21 +13,24 @@
       event_data:
         entity_id: binary_sensor.sensor_vibracion
         movement_type: vibrate
-        #movement_type: vibrate/tilt/free_fall [choose one]
         
     - platform: event
       event_type: xiaomi_aqara.movement
       event_data:
         entity_id: binary_sensor.sensor_vibracion
         movement_type: free_fall
-        #movement_type: vibrate/tilt/free_fall [choose one]
         
     - platform: event
       event_type: xiaomi_aqara.movement
       event_data:
         entity_id: binary_sensor.sensor_vibracion
         movement_type: tilt
-        #movement_type: vibrate/tilt/free_fall [choose one]
+    
+  condition:
+
+    - condition: state
+      entity_id: input_boolean.notify_vibration
+      state: 'on'
     
   action:
     

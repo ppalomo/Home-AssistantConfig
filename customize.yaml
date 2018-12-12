@@ -6,6 +6,7 @@
 
 sensor.nest_thermostat_target:
   friendly_name: Temperatura de la calefacción
+  
 input_boolean.notify_thermostat:
   friendly_name: Notificaciones de termostato
 
@@ -15,14 +16,24 @@ input_boolean.notify_thermostat:
 #                                                  #
 ####################################################
 
-# switch.luz_ambiente_comedor_1:
-#   friendly_name: Bola del comedor
-
 switch.cono_comedor:
   friendly_name: Cono del comedor
 
 switch.arbol_navidad:
   friendly_name: Árbol de Navidad
+  icon: mdi:pine-tree
+
+switch.sonoff01:
+  friendly_name: 'Sonoff 1'
+  
+switch.sonoff02:
+  friendly_name: 'Piedra del despacho'
+  
+switch.sonoff01_2:
+  hidden: true
+  
+switch.sonoff02_2:
+  hidden: true
 
 ####################################################
 #                                                  #
@@ -57,11 +68,11 @@ sensor.dark_sky_wind_speed:
 #                                                  #
 ####################################################
 
+# Se configura en configuration.yaml
 # customize_domain:
-#   light:
+ 
+#   switch:
 #     icon: mdi:lightbulb-on-outline
-#   automation:
-#     initial_state: 'on'
 
 ####################################################
 #                                                  #

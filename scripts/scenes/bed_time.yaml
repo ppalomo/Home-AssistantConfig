@@ -8,19 +8,24 @@ alias: Buenas noches
 sequence:
 
   - alias: Apagar luces del comedor
-    service: script.turn_off
+    service: script.turn_on
     entity_id:
       - script.turn_off_livingroom_lights
 
   - alias: Apagar luces de la salita
-    service: script.turn_off
+    service: script.turn_on
     entity_id:
       - script.turn_off_gamesroom_lights
       
   - alias: Apagar luces de la cocina
-    service: script.turn_off
+    service: script.turn_on
     entity_id:
       - script.turn_off_kitchen_lights
+
+  - alias: Apagar luces del despacho
+    service: script.turn_on
+    entity_id:
+      - script.turn_off_office_lights
 
   - alias: Apagar media players
     service: media_player.turn_off

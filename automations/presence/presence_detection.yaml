@@ -1,10 +1,10 @@
 ###################################################
 #                                                 #
-#            Alguien ha llegado a casa            #
+#            Detección de presencia            #
 #                                                 #
 ###################################################
 
-- alias: Alguien ha llegado a casa
+- alias: Detección de presencia
 
   trigger:
     
@@ -12,16 +12,20 @@
       entity_id: device_tracker.natalia, device_tracker.pablo
       from: not_home
       to: home
+      
+    - platform: state
+      entity_id: device_tracker.natalia, device_tracker.pablo
+      from: home
+      to: not_home
 
   condition:
     
     - condition: state
       entity_id: input_boolean.notify_presence
       state: 'on'
-    
-    - condition: time
-      after: '07:00:00'
-      before: '23:00:00'
+      
+    - condition: template
+      value_template: '{{ ((as_timestamp(now()) -as_timestamp(states.binary_sensor.puerta_entrada.last_updated)) / 60 | int) < 10  }}'
   
   action:
     
@@ -42,3 +46,4 @@
               {{ "Pablo ha salido de casa" }}
             {% endif %}
           {% endif %}
+          - Tiempo desde apertura puerta: {{ ((as_timestamp(now()) -as_timestamp(states.binary_sensor.puerta_entrada.last_updated)) / 60) | round(2) }} min

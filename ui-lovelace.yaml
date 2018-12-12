@@ -11,439 +11,229 @@ resources:
     type: js
   - url: /local/custom_ui/button-card.js
     type: module
+  - url: /local/custom_ui/slider-entity-row.js
+    type: module
 title: Smart Home
 views:
 
 ####################################################
 #                                                  #
-#                    Inicio                        #
+#                    General                       #
 #                                                  #
 ####################################################
 
-  - id: summary
-    title: General
-    icon: mdi:home
-    cards:
-    
-    - type: weather-forecast
-      entity: weather.dark_sky
-      
+- id: summary
+  title: General
+  icon: mdi:home
+  cards:
+
+    - type: "custom:button-card"
+      action: script.vacuum_kitchen
+      color_type: card
+      color: rgb(66, 134, 244)
+      name: Alma
+
     - type: entities
-      title: Media Players
+      title: Entities card sample
+      show_header_toggle: true
       entities:
-       - entity: media_player.comedor
-         type: custom:mini-media-player
-         group: true
-         icon: mdi:cast-connected
-         artwork_border: true
-         show_source: true
-       - entity: media_player.salita
-         type: custom:mini-media-player
-         group: true
-         icon: mdi:cast-connected
-         artwork_border: true
-         show_source: true
-       - entity: media_player.dormitorio
-         type: custom:mini-media-player
-         group: true
-         icon: mdi:cast-connected
-         artwork_border: true
-         show_source: true
+        - type: call-service
+          icon: mdi:power
+          name: Bed light
+          action_name: Toggle light
+          service: light.toggle
+          service_data:
+            entity_id: light.bed_light
+        - type: section
+          label: Muahaha
+        - type: weblink
+          name: Home Assistant
+          url: https://www.home-assistant.io/
+          icon: mdi:home-assistant
+
+####################################################
+#                                                  #
+#                     Luces                        #
+#                                                  #
+####################################################
+
+- id: lights
+  title: Luces
+  icon: mdi:lightbulb
+  cards:
+
+    - type: entities
+      title: Comedor
+      show_header_toggle: true
+      entities:
+        - entity: switch.bola_comedor
+        - entity: switch.cono_comedor
+        - entity: switch.arbol_navidad
+        - type: section
+          label: Escenas
+        - entity: script.turn_on_livingroom_ambient_lights
+          icon: mdi:lightbulb
+        - entity: script.turn_off_livingroom_lights
+          icon: mdi:lightbulb-outline
     
-    - type: "custom:mini-graph-card"
-      entity: sensor.dark_sky_temperature
-      height: 80
-      line_width: 4
-      font_size: 75
-      labels: true
-      detail: 2
-      color: '#3498db'
-
-    - type: "custom:mini-graph-card"
-      entity: sensor.dark_sky_precip_intensity
-      height: 80
-      line_width: 4
-      font_size: 75
-      labels: true
-      detail: 2
-      color: '#3498db'
-
-    # Vacuum
-    - type: vertical-stack
-      cards:
-        - type: picture-elements
-          title: Limpieza
-          image: '/local/images/vacuum_card.jpeg'
-          elements:
-            - type: icon
-              icon: mdi:bell-ring
-              tap_action: call-service
-              entity: vacuum.xiaomi_vacuum_cleaner
-              service: vacuum.locate
-              style:
-                top: 90%
-                left: 80%
-                color: '#3090C7'
-            - type: icon
-              icon: mdi:crosshairs
-              tap_action: call-service
-              entity: vacuum.xiaomi_vacuum_cleaner
-              service: vacuum.clean_spot
-              style:
-                top: 90%
-                left: 65%
-                color: '#3090C7'
-            - type: icon
-              tap_action: call-service
-              icon: mdi:home
-              entity: vacuum.xiaomi_vacuum_cleaner
-              service: vacuum.return_to_base
-              style:
-                top: 90%
-                left: 50%
-                color: '#3090C7'
-            - type: icon
-              icon: mdi:stop
-              tap_action: call-service
-              entity: vacuum.xiaomi_vacuum_cleaner
-              service: vacuum.stop
-              style:
-                top: 90%
-                left: 35%
-                color: '#3090C7'
-            - type: icon
-              icon: mdi:play
-              tap_action: call-service
-              entity: vacuum.xiaomi_vacuum_cleaner
-              service: vacuum.start
-              style:
-                top: 90%
-                left: 20%
-                color: '#3090C7'
-            - type: state-label
-              tap_action: more-info
-              entity: vacuum.xiaomi_vacuum_cleaner
-              style:
-               top: 14%
-               right: 38%
-               color: rgb(255, 255, 255)
-               transform: translate(0%,-50%)
-               font-family: Trebuchet MS
-               font-size: 150%
-               font-weight: bold
-               border-color: rgb(34, 154, 210)
-               border-radius: 6px
-               background-color: '#cccccc'
-            - type: state-label
-              entity: sensor.vacuum_cleanmainbrush
-              style:
-                top: 35%
-                right: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 76%
-                font-weight: bold
-                border-right-style: solid
-                border-color: rgb(34, 154, 210)
-            - type: state-label
-              entity: sensor.vacuum_cleansidebrush
-              style:
-                top: 45%
-                right: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 76%
-                font-weight: bold
-                border-right-style: solid
-                border-color: rgb(34, 154, 210)
-            - type: state-label
-              entity: sensor.vacuum_cleanfilter
-              style:
-                top: 55%
-                right: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 76%
-                font-weight: bold
-                border-right-style: solid
-                border-color: rgb(34, 154, 210)
-                opacity: 0.8
-            - type: state-label
-              entity: sensor.vacuum_sensordirtyleft
-              style:
-                top: 65%
-                right: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 76%
-                font-weight: bold
-                border-right-style: solid
-                border-color: rgb(34, 154, 210)
-            - type: state-label
-              entity: sensor.vacuum_status
-              style:
-                top: 40%
-                left: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 80%
-                font-weight: bold
-                border-left-style: solid
-                border-color: '#3090C7'
-            - type: state-label
-              entity: sensor.vacuum_battery
-              style:
-                top: 50%
-                left: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 80%
-                font-weight: bold
-                border-left-style: solid
-                border-color: rgb(34, 154, 210)
-            - type: state-label
-              entity: sensor.vacuum_fan_speed
-              style:
-                top: 60%
-                left: 1%
-                color: '#ffffff'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 80%
-                font-weight: bold
-                border-left-style: solid
-                border-color: rgb(34, 154, 210)
-            - type: state-label
-              entity: sensor.vacuum_cleaned_area
-              prefix: "Area:"
-              style:
-                top: 79%
-                left: 31%
-                color: '#84a6ba'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 80%
-                font-weight: bold
-            - type: state-label
-              entity: sensor.vacuum_cleaning_time
-              prefix: "Time:"
-              style:
-                top: 79%
-                left: 51%
-                color: '#84a6ba'
-                transform: translate(0%,-50%)
-                pointer-events: none
-                font-family: Trebuchet MS
-                font-size: 80%
-                font-weight: bold
-        - type: "custom:button-card"
-          action: script.vacuum_all
-          color_type: label-card
-          color: rgb(44, 109, 214)
-          name: General
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              action: script.vacuum_kitchen
-              color_type: card
-              color: rgb(66, 134, 244)
-              name: Cocina
-            - type: "custom:button-card"
-              action: script.vacuum_livingroom
-              color_type: card
-              color: rgb(66, 134, 244)
-              name: Comedor
-            - type: "custom:button-card"
-              action: script.vacuum_kitchen
-              color_type: card
-              color: rgb(66, 134, 244)
-              name: Despacho
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              action: script.vacuum_kitchen
-              color_type: card
-              color: rgb(66, 134, 244)
-              name: Alma
-            - type: "custom:button-card"
-              action: script.vacuum_livingroom
-              color_type: card
-              color: rgb(66, 134, 244)
-              name: Salita
-            - type: "custom:button-card"
-              action: script.vacuum_kitchen
-              color_type: card
-              color: rgb(66, 134, 244)
-              name: Dormitorio
-        - type: entities
-          show_header_toggle: false
-          entities:
-            - input_boolean.notify_vacuum
-            - input_boolean.daily_vacuum
-
-####################################################
-#                                                  #
-#                     Comedor                      #
-#                                                  #
-####################################################
-
-  - id: comedor
-    title: Comedor
-    #icon: mdi:lightbulb
-    cards:
-      
-      # - type: entities
-      #   title: Comedor
-      #   entities:
+    - type: entities
+      title: Cocina
+      show_header_toggle: true
+      entities:
+        - entity: switch.leds_cocina
+        - type: section
+          label: Escenas
+        - entity: script.turn_on_kitchen_ambient_lights
+          icon: mdi:lightbulb
+        - entity: script.turn_off_kitchen_lights
+          icon: mdi:lightbulb-outline
           
-      - type: glance
-        entities:
-          - entity: sensor.nest_thermostat_temperature
-            name: Temperatura
-          - entity: sensor.nest_thermostat_humidity
-            name: Humedad
-      
-      - type: vertical-stack
-        title: Luces
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: "custom:button-card"
-                icon: mdi:lightbulb
-                entity: switch.bola_comedor
-                name: Sofá
-                color: rgb(255, 204, 97)
-              - type: "custom:button-card"
-                entity: switch.bola_comedor
-                icon: mdi:lightbulb
-                name: Bola
-                color: rgb(255, 204, 97)
-              - type: "custom:button-card"
-                entity: switch.cono_comedor
-                icon: mdi:lightbulb
-                name: Cono
-                color: rgb(255, 204, 97)
-              - type: "custom:button-card"
-                entity: switch.arbol_navidad
-                icon: mdi:pine-tree
-                name: Árbol
-                color: rgb(38, 174, 96)
-                
-      - type: horizontal-stack
-        cards:
-          - type: "custom:button-card"
-            icon: mdi:weather-night
-            entity: script.turn_on_livingroom_ambient_lights
-            size: 40px
-            name: Luces ambiente
-            style:
-              - text-transform: none
-              - color: white
-              - background-color: rgb(28, 128, 199)
-          - type: "custom:button-card"
-            icon: mdi:flash-off
-            entity: script.turn_off_livingroom_lights
-            name: Apagar luces
-            size: 40px
-            style:
-              - text-transform: none
-              - color: white
-              - background-color: rgb(28, 128, 199)
-                
+    - type: entities
+      title: Despacho
+      show_header_toggle: true
+      entities:
+        - entity: switch.sonoff02
+        - type: section
+          label: Escenas
+        - entity: script.turn_on_office_ambient_lights
+          icon: mdi:lightbulb
+        - entity: script.turn_off_office_lights
+          icon: mdi:lightbulb-outline
+          
+    - type: entities
+      title: Salita
+      show_header_toggle: true
+      entities:
+        - entity: switch.lampara_pie_salita
+        - entity: switch.bola_salita
+        - type: section
+          label: Escenas
+        - entity: script.turn_on_gamesroom_ambient_lights
+          icon: mdi:lightbulb
+        - entity: script.turn_off_gamesroom_lights
+          icon: mdi:lightbulb-outline
+          
+    - type: entities
+      title: Aseo
+      show_header_toggle: true
+      entities:
+        - type: custom:slider-entity-row
+          entity: light.luz_gateway
+
     
-      # # Iluminación Gateway
-      # - type: sensor
-      #   entity: sensor.iluminacion_gateaway
-      #   name: Iluminación Gateway
-      #   height: 75
-      #   line_color: "#3498db"
+# # This file was automatically generated by lovelace_migrate.py
+# # https://github.com/dale3h/python-lovelace
 
-####################################################
-#                                                  #
-#                    Dormitorio                    #
-#                                                  #
-####################################################
-
-  - id: dormitorio
-    title: Dormitorio
-    #icon: mdi:lightbulb
-    cards:
-      
-      - type: glance
-        entities:
-          - entity: sensor.temperatura_dormitorio
-            name: Temperatura
-          - entity: sensor.humedad_dormitorio
-            name: Humedad
-          - entity: sensor.presion_dormitorio
-            name: Presión
-
-####################################################
-#                                                  #
-#                     Cocina                       #
-#                                                  #
-####################################################
-
-  - id: cocina
-    title: Cocina
-    cards:
-
-      - type: vertical-stack
-        title: Luces
-        cards:
-          - type: horizontal-stack
-            cards:
-              - type: "custom:button-card"
-                icon: mdi:lightbulb
-                entity: switch.leds_cocina
-                name: Leds TV
-                color: rgb(255, 204, 97)
-
-####################################################
-#                                                  #
-#                    Settings                      #
-#                                                  #
-####################################################
-
-  - id: settings  # Automatically created id
-    title: Preferencias
-    icon: mdi:settings
-    cards:
-    
-      # Notifications
-      - id: notifications
-        type: entities
-        title: Notificaciones
-        icon: mdi:radar
-        show_header_toggle: true
-        entities:
-          - input_boolean.notify_presence
-          - input_boolean.notify_thermostat
-          - input_boolean.notify_vacuum
-          - input_boolean.notify_weather
-
-      # Automations
-      - id: automations
-        type: entities
-        title: Automatizaciones
-        show_header_toggle: true
-        entities:
-          - entity: input_boolean.gateway_light_night_mode
-          - entity: input_boolean.daily_vacuum
-            name: Limpieza diaria
-            icon: mdi:broom
-
+# title: Home
+# views:
+#   - title: Home
+#     cards:
+#       - type: entities
+#         title: Luces del comedor
+#         show_header_toggle: true
+#         entities:
+#           - switch.cono_comedor
+#           - switch.arbol_navidad
+#           - switch.bola_comedor
+#       - type: entities
+#         title: Luces de la cocina
+#         show_header_toggle: true
+#         entities:
+#           - switch.leds_cocina
+#       - type: media-control
+#         entity: media_player.comedor
+#       - type: entities
+#         title: all switches
+#         show_header_toggle: true
+#         entities:
+#           - switch.cono_comedor
+#           - switch.lampara_pie_salita
+#           - switch.power_tv_comedor
+#           - switch.63804520600194a91ffc_2
+#           - switch.06712363840d8e49683f_3
+#           - switch.63804520600194a91ffc_3
+#           - switch.bola_comedor
+#           - switch.bola_salita
+#           - switch.06712363840d8e49683f_7
+#           - switch.usb_salita
+#           - switch.leds_cocina
+#           - switch.arbol_navidad
+#           - switch.tv_comedor
+#           - switch.tv_comedor_volumen
+#           - switch.sonoff01
+#           - switch.sonoff02
+#           - switch.sonoff02_2
+#       - type: entities
+#         title: all scripts
+#         show_header_toggle: true
+#         entities:
+#           - script.heating_set_mode_off
+#           - script.turn_off_kitchen_lights
+#           - script.turn_off_livingroom_lights
+#           - script.turn_off_office_lights
+#           - script.turn_off_gamesroom_lights
+#           - script.bed_time
+#           - script.wakeup_time
+#           - script.wakeup_time_tv_on
+#           - script.vacuum_livingroom
+#           - script.vacuum_all
+#           - script.vacuum_kitchen
+#           - script.turn_on_kitchen_ambient_lights
+#           - script.turn_on_gamesroom_ambient_lights
+#           - script.turn_on_livingroom_ambient_lights
+#           - script.tv_time
+#           - script.home_away
+#           - script.set_heating_temperature_20
+#           - script.set_heating_temperature_21
+#           - script.set_heating_temperature_22
+#           - script.set_heating_temperature_23
+#           - script.set_heating_temperature_24
+#           - script.set_heating_temperature_25
+#           - script.heating_set_mode_eco
+#       - type: entities
+#         title: all automations
+#         show_header_toggle: true
+#         entities:
+#           - automation.alerta_de_lluvia
+#           - automation.alguien_ha_llegado_a_casa
+#           - automation.apagado_automatico_de_luces
+#           - automation.bla_bla_bla
+#           - automation.el_termostato_esta_apagado
+#           - automation.el_termostato_esta_en_modo_eco
+#           - automation.encendido_automatico_de_la_luz_del_gateway
+#           - automation.encendido_automatico_de_luces_del_comedor
+#           - automation.ifttt_test
+#           - automation.la_calefaccion_se_ha_encendido
+#           - automation.la_limpieza_ha_finalizado
+#       - type: entities
+#         title: all lights
+#         show_header_toggle: true
+#         entities:
+#           - light.luz_gateway
+#       - type: entities
+#         title: all vacuum cleaners
+#         show_header_toggle: true
+#         entities:
+#           - vacuum.xiaomi_vacuum_cleaner
+#       - type: entities
+#         title: calendar
+#         show_header_toggle: true
+#         entities:
+#           - calendar.aniversarios
+#           - calendar.compartido
+#           - calendar.festivos
+#           - calendar.pablo_palomo
+#       - type: media-control
+#         entity: media_player.comedor
+#       - type: media-control
+#         entity: media_player.echo_dot
+#       - type: media-control
+#         entity: media_player.firealma
+#       - type: media-control
+#         entity: media_player.pablos_echosim_beta
+#       - type: media-control
+#         entity: media_player.this_device
+#       - type: media-control
+#         entity: media_player.pablos_alexa_apps
+#       - type: weather-forecast
+#         entity: weather.dark_sky

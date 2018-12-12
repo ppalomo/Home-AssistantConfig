@@ -1,0 +1,24 @@
+###################################################
+#                                                 #
+#           Apagado automático de luces           #
+#                                                 #
+###################################################
+
+- alias: Apagado automático de luces
+
+  trigger:
+
+    - platform: state
+      entity_id: light.luz_gateway
+      to: 'off'
+  
+  condition:
+  
+    - condition: time
+      after: '22:00:00'
+      before: '02:00:00'
+  
+  action:
+    
+    - service: script.turn_on
+      entity_id: script.bed_time

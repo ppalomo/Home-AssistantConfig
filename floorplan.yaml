@@ -42,7 +42,8 @@ groups:
          - sensor.nest_thermostat_temperature
          - sensor.dark_sky_temperature
          - sensor.nest_thermostat_target
-         - sensor.temperatura_dormitorio   
+         - sensor.temperatura_dormitorio  
+         - sensor.temperatura_alma
       text_template: '${entity.state ? entity.state + "°C" : "-"}'
       
     - name: Humidity
@@ -51,6 +52,7 @@ groups:
          - sensor.nest_thermostat_humidity
          - sensor.dark_sky_precip_probability
          - sensor.humedad_dormitorio
+         - sensor.humedad_alma
       text_template: '${entity.state ? entity.state + "%" : "-"}'
       
     - name: Wind
@@ -125,6 +127,7 @@ groups:
         - light.luz_gateway
         - switch.bola_salita
         - switch.lampara_pie_salita
+        - switch.sonoff02
       states:
         - state: 'off'
           class: 'light-off'
@@ -142,6 +145,24 @@ groups:
           class: 'light-off'
         - state: 'on'
           class: 'nest-eco'
+      action:
+        domain: homeassistant
+        service: toggle
+
+####################################################
+#                                                  #
+#                     Doors                        #
+#                                                  #
+####################################################
+
+    - name: Doors
+      entities:
+        - binary_sensor.puerta_entrada
+      states:
+        - state: 'off'
+          class: 'door-closed'
+        - state: 'on'
+          class: 'door-open'
       action:
         domain: homeassistant
         service: toggle

@@ -1,0 +1,14 @@
+###################################################
+#                                                 #
+#             Luces ambiente cocina               #
+#                                                 #
+###################################################
+
+alias: Luces ambiente de la cocina
+sequence:
+
+  - alias: Encender luces de la cocina
+    service: switch.turn_on
+    data:
+      entity_id: 
+        - switch.leds_cocina
