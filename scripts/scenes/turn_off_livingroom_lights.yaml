@@ -12,7 +12,3 @@ sequence:
     data:
       entity_id: 
         - group.luces_comedor
-        # - switch.arbol_navidad
-        # - switch.bola_comedor
-        # - switch.cono_comedor
-        # - switch.0x7cb03eaa00b1a73a_switch # lampara_pie_comedor

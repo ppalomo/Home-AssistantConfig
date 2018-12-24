@@ -9,7 +9,7 @@
   trigger:
     
     - platform: mqtt
-      topic: 'zigbee2mqtt/pulsador_puerta_entrada'
+      topic: 'zigbee2mqtt/pulsador_recibidor'
     
   condition:
   

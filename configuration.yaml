@@ -280,22 +280,12 @@ xiaomi_aqara:
 camera:
   - platform: generic
     name: parking_seat_leon
-    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.sensor.imap_emails.state }}&zoom=17&size=500x400&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.sensor.imap_emails.state }}&key=AIzaSyBIWrtBSNRzhAN9gk4FqzsdPuU0-oAKz-Q
+    still_image_url: !secret camera_seat_leon
     limit_refetch_to_url_change: true
   - platform: generic
     name: parking_ford_focus
-    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.sensor.imap_emails.state }}&zoom=17&size=500x400&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.sensor.imap_emails.state }}&key=AIzaSyBIWrtBSNRzhAN9gk4FqzsdPuU0-oAKz-Q
+    still_image_url: !secret camera_ford_focus
     limit_refetch_to_url_change: true
-  
-  # name: Parking
-  # platform: generic
-  # still_image_url: https://maps.googleapis.com/maps/api/staticmap?center= 1{{ states('sensor.imap_emails') }}&zoom=18&size=500x500&maptype=roadmap&markers=color:red%7Clabel:P%7C{{ states('sensor.imap_emails') }}
-  # limit_refetch_to_url_change: true
-  
-  # platform: generic
-  # name: parking_seat_leon
-  # still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.sensor.imap_emails }}&zoom=18&size=500x500&maptype=roadmap&markers=color:red%7Clabel:P%7C{{ states.sensor.imap_emails }}
-  # limit_refetch_to_url_change: true
 
 ####################################################
 #                                                  #
