@@ -1,0 +1,84 @@
+###################################################
+#                                                 #
+#     Click simple del pulsador de la salita      #
+#                                                 #
+###################################################
+
+- alias: Click simple del pulsador de la salita
+
+  trigger:
+    
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.pulsador_salita
+        click_type: single
+        
+    # - platform: event
+    #   event_type: xiaomi_aqara.click
+    #   event_data:
+    #     entity_id: binary_sensor.pulsador_salita
+    #     click_type: double
+  
+  condition:
+  
+    - condition: state
+      entity_id: group.luces_salita
+      state: 'off'
+  
+  action:
+    
+    # Encender luces de ambiente
+    - service: script.turn_on
+      entity_id: script.turn_on_gamesroom_ambient_lights
+      
+###################################################
+#                                                 #
+#      Click doble del pulsador de la salita      #
+#                                                 #
+###################################################
+
+- alias: Click doble del pulsador de la salita
+
+  trigger:
+    
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+        entity_id: binary_sensor.pulsador_salita
+        click_type: double
+  
+  action:
+    
+    # Apagar luces de la salita
+    - service: script.turn_on
+      entity_id: script.turn_off_gamesroom_lights
+
+# - alias: Click doble del pulsador de la salita
+
+#   trigger:
+    
+#     - platform: event
+#       event_type: xiaomi_aqara.click
+#       event_data:
+#         entity_id: binary_sensor.pulsador_salita
+#         click_type: single
+        
+#     - platform: event
+#       event_type: xiaomi_aqara.click
+#       event_data:
+#         entity_id: binary_sensor.pulsador_salita
+#         click_type: double
+  
+#   condition:
+  
+#     - condition: state
+#       entity_id: group.luces_salita
+#       state: 'on'
+  
+#   action:
+    
+#     # Apagar luces de la salita
+#     - service: script.turn_on
+#       entity_id: script.turn_off_gamesroom_lights
+

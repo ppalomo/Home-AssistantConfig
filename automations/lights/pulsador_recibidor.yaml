@@ -1,0 +1,79 @@
+###################################################
+#                                                 #
+#     Click simple del pulsador del recibidor     #
+#                                                 #
+###################################################
+
+- alias: Click simple del pulsador del recibidor
+
+  trigger:
+    
+    - platform: mqtt
+      topic: 'zigbee2mqtt/pulsador_puerta_entrada'
+    
+  condition:
+  
+    condition: template
+    value_template: '{{ trigger.payload_json.click == "single" }}'
+  
+  action:
+    
+    # Encender luces de bienvenida
+    - service: script.turn_on
+      entity_id: script.welcome_home
+
+# - alias: Click simple del pulsador del recibidor
+
+#   trigger:
+    
+#     - platform: event
+#       event_type: xiaomi_aqara.click
+#       event_data:
+#         entity_id: binary_sensor.pulsador_recibidor
+#         click_type: single
+  
+#   action:
+    
+#     # Encender luces de bienvenida
+#     - service: script.turn_on
+#       entity_id: script.welcome_home
+      
+###################################################
+#                                                 #
+#      Click doble del pulsador del recibidor     #
+#                                                 #
+###################################################
+
+- alias: Click doble del pulsador del recibidor
+
+  trigger:
+    
+    - platform: mqtt
+      topic: 'zigbee2mqtt/pulsador_puerta_entrada'
+    
+  condition:
+  
+    condition: template
+    value_template: '{{ trigger.payload_json.click == "double" }}'
+  
+  action:
+    
+    # Apagar todo al salir de casa
+    - service: script.turn_on
+      entity_id: script.home_away
+
+# - alias: Click doble del pulsador del recibidor
+
+#   trigger:
+    
+#     - platform: event
+#       event_type: xiaomi_aqara.click
+#       event_data:
+#         entity_id: binary_sensor.pulsador_recibidor
+#         click_type: double
+  
+#   action:
+    
+#     # Apagar todo al salir de casa
+#     - service: script.turn_on
+#       entity_id: script.home_away

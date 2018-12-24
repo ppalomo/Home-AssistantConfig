@@ -1,0 +1,30 @@
+###################################################
+#                                                 #
+#              Snapshot automático                #
+#                                                 #
+###################################################
+
+- alias: Hassio snapshot automático
+  initial_state: True  
+  id: weeklysnapshot
+  
+  trigger:
+    
+    - platform: time
+      at: 03:00:00
+  
+  # condition:
+  
+  #   - condition: time
+  #     weekday: 
+  #       - sun
+        
+  action:
+    - service: hassio.snapshot_full
+      data_template:
+        name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+    - service: notify.telegramdepablo
+      data:
+        title: "Snapshot automático:"
+        message: |
+          Se ha generado el un snapshot automático de la configuración

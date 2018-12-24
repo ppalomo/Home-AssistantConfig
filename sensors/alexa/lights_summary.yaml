@@ -1,20 +1,20 @@
-- platform: template
-  sensors:
-    lights_summary:
-      friendly_name: Informe de situación de las luces
-      value_template: >-
-        {% if is_state('group.all_switches', 'on') or is_state('group.all_lights', 'on') %}
-          Las siguientes luces están encendidas.
-          {% for state in states.switch -%}
-            {% if state.state == 'on' %}
-              {{state.name}}.
-            {% endif %}
-          {%- endfor %}
-          {% for state in states.light -%}
-            {% if state.state == 'on' %}
-              {{state.name}}.
-            {% endif %}
-          {%- endfor %}
-        {%- else -%}
-          No hay ninguna luz encendida.
-        {%- endif -%}
+# - platform: template
+#   sensors:
+#     lights_summary:
+#       friendly_name: Informe de situación de las luces
+#       value_template: >-
+#         {% if is_state('group.all_switches', 'on') or is_state('group.all_lights', 'on') %}
+#           Las siguientes luces están encendidas.
+#           {% for state in states.switch -%}
+#             {% if state.state == 'on' %}
+#               {{state.name}}.
+#             {% endif %}
+#           {%- endfor %}
+#           {% for state in states.light -%}
+#             {% if state.state == 'on' %}
+#               {{state.name}}.
+#             {% endif %}
+#           {%- endfor %}
+#         {%- else -%}
+#           No hay ninguna luz encendida.
+#         {%- endif -%}

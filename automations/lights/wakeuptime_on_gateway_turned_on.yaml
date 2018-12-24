@@ -5,6 +5,7 @@
 ###################################################
 
 - alias: Encendido de luces al encender el Gateway
+  initial_state: true
 
   trigger:
 

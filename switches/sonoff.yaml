@@ -1,5 +1,6 @@
 - name: sonoff02
   platform: mqtt
+  schema: "basic"
   state_topic: sonoff02/relay/0
   command_topic: sonoff02/relay/0/set
   payload_on: 1

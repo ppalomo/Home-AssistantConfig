@@ -5,6 +5,9 @@
 ###################################################
 
 homeassistant:
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
   
   # Name of the location where Home Assistant is running
   name: Home
@@ -33,6 +36,10 @@ homeassistant:
 # Enables the frontend
 frontend:
   themes: !include themes.yaml
+  
+# Lovelace
+lovelace:
+  mode: yaml
 
 # Enables configuration UI
 config:
@@ -83,19 +90,19 @@ tts:
 #                                                 #
 ###################################################
 
-panel_iframe:
-  ide:
-    title: IDE
-    icon: mdi:code-braces
-    url: !secret ide_url
-  configurator:
-    title: Configurator
-    icon: mdi:wrench
-    url: !secret configurator_url
-  influxdb:
-    title: InfluxDB
-    icon: mdi:chart-areaspline
-    url: !secret influxdb_url
+# panel_iframe:
+#   ide:
+#     title: IDE
+#     icon: mdi:code-braces
+#     url: !secret ide_url
+#   configurator:
+#     title: Configurator
+#     icon: mdi:wrench
+#     url: !secret configurator_url
+#   influxdb:
+#     title: InfluxDB
+#     icon: mdi:chart-areaspline
+#     url: !secret influxdb_url
 
 panel_custom:
   - name: floorplan
@@ -146,9 +153,9 @@ alexa:
         - switch.lampara_pie_salita # Alexa, enciende/apaga la lampara de pie de la salita
         - switch.sonoff02 # Alexa, enciende/apaga la piedra del despacho
         - sensor.temperatura_dormitorio # Alexa, dime la temperatura del dormitorio
-        - script.turn_on_livingroom_ambient_lights # Alexa, enciende las luces de ambiente del comedor
-        - script.turn_off_livingroom_lights
-        - script.turn_on_gamesroom_ambient_lights
+        #- script.turn_on_livingroom_ambient_lights # Alexa, enciende las luces de ambiente del comedor
+        #- script.turn_off_livingroom_lights
+        #- script.turn_on_gamesroom_ambient_lights
       # include_domains:
       #   - switch
       # exclude_entities:
@@ -170,17 +177,17 @@ alexa:
     whoishome:
       - title: Informe de situación de la casa
         text: >
-          {{ states.sensor.summary.state }}
+          Test
 
 intent_script:
   LucesEncendidasIntent:
     speech:
       text: >
-        {{ states.sensor.lights_summary.state }}
+        Test
   CalefaccionIntent:
     speech:
       text: >
-        {{ states.sensor.heating_summary.state }}
+        Test
 
 google:
   client_id: !secret google_id
@@ -192,12 +199,12 @@ google:
 #                                                  #
 ####################################################
 
-# Example configuration.yaml entry
-weather:
-  - platform: darksky
-    api_key: !secret darksky_apikey
-    latitude: !secret latitude
-    longitude: !secret longitude
+# # Example configuration.yaml entry
+# weather:
+#   - platform: darksky
+#     api_key: !secret darksky_apikey
+#     latitude: !secret latitude
+#     longitude: !secret longitude
 
 # Nest
 nest:
@@ -212,7 +219,6 @@ telegram_bot:
       - !secret telegram_chat_id
 
 notify:
-
   - name: TelegramDePablo
     platform: telegram
     chat_id: !secret telegram_chat_id
@@ -271,6 +277,26 @@ xiaomi_aqara:
 #       - sensor.temperatura_dormitorio
 #     hours_to_show: 120
 
+camera:
+  - platform: generic
+    name: parking_seat_leon
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.sensor.imap_emails.state }}&zoom=17&size=500x400&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.sensor.imap_emails.state }}&key=AIzaSyBIWrtBSNRzhAN9gk4FqzsdPuU0-oAKz-Q
+    limit_refetch_to_url_change: true
+  - platform: generic
+    name: parking_ford_focus
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.sensor.imap_emails.state }}&zoom=17&size=500x400&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.sensor.imap_emails.state }}&key=AIzaSyBIWrtBSNRzhAN9gk4FqzsdPuU0-oAKz-Q
+    limit_refetch_to_url_change: true
+  
+  # name: Parking
+  # platform: generic
+  # still_image_url: https://maps.googleapis.com/maps/api/staticmap?center= 1{{ states('sensor.imap_emails') }}&zoom=18&size=500x500&maptype=roadmap&markers=color:red%7Clabel:P%7C{{ states('sensor.imap_emails') }}
+  # limit_refetch_to_url_change: true
+  
+  # platform: generic
+  # name: parking_seat_leon
+  # still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.sensor.imap_emails }}&zoom=18&size=500x500&maptype=roadmap&markers=color:red%7Clabel:P%7C{{ states.sensor.imap_emails }}
+  # limit_refetch_to_url_change: true
+
 ####################################################
 #                                                  #
 #                       MQTT                       #
@@ -281,8 +307,20 @@ mqtt:
   broker: core-mosquitto
   username: !secret mqtt_username
   password: !secret mqtt_password
-  #discovery: true
+  discovery: true
   #discovery_prefix: homeassistant
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
+# Timer for joining time remaining (120 sec = 2 min)
+timer:
+  zigbee_permit_join:
+    name: Time remaining
+    duration: 120
 
 ####################################################
 #                                                  #
@@ -306,7 +344,7 @@ automation: !include_dir_merge_list automations
 #device_tracker: !include_dir_list device_tracker/
 input_number: !include input_numbers.yaml
 input_boolean: !include input_booleans.yaml
-#input_select: !include input_selects.yaml
+input_select: !include input_selects.yaml
 group: !include groups.yaml
 script: !include_dir_named scripts/
 scene: !include_dir_list scenes/

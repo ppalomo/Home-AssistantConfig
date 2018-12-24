@@ -38,14 +38,11 @@ views:
             
     - type: vertical-stack
       cards:
-        - type: markdown
-          content: >
-            ## Temperatura
         - type: horizontal-stack
           cards:
             - type: gauge
               title: Exterior
-              unit: 'ºC'
+              unit: '%'
               entity: sensor.dark_sky_temperature
               min: 0
               max: 44
@@ -55,7 +52,7 @@ views:
                 red: 26
             - type: gauge
               title: Comedor
-              unit: 'ºC'
+              unit: '%'
               entity: sensor.nest_thermostat_temperature
               min: 0
               max: 44
@@ -67,7 +64,7 @@ views:
           cards:
             - type: gauge
               title: Alma
-              unit: 'ºC'
+              unit: '%'
               entity: sensor.temperatura_alma
               min: 0
               max: 44
@@ -77,7 +74,7 @@ views:
                 red: 23
             - type: gauge
               title: Dormitorio
-              unit: 'ºC'
+              unit: '%'
               entity: sensor.temperatura_dormitorio
               min: 0
               max: 44
@@ -89,16 +86,13 @@ views:
     - type: vertical-stack
       title: main_scripts
       cards:
-        - type: markdown
-          content: >
-            ## Escenas
         - type: horizontal-stack
           cards:
             - type: "custom:button-card"
               icon: mdi:lightbulb
               entity: script.welcome_home
-              name: Bienvenido
-              # size: 40px
+              name: Encender luces
+              size: 40px
               color_type: card
               color: rgb(223, 255, 97)
               style:
@@ -106,10 +100,10 @@ views:
                 - color: white
                 - background-color: rgb(38, 174, 96)
             - type: "custom:button-card"
-              icon: mdi:coffee
+              icon: mdi:weather-sunny
               entity: script.wakeup_time
               name: Buenos días
-              # size: 40px
+              size: 40px
               color_type: card
               color: rgb(223, 255, 97)
               style:
@@ -117,24 +111,10 @@ views:
                 - color: white
                 - background-color: rgb(38, 174, 96)
             - type: "custom:button-card"
-              icon: mdi:television-classic
-              entity: script.tv_time
-              name: TV Time
-              # size: 40px
-              color_type: card
-              color: rgb(223, 255, 97)
-              style:
-                - text-transform: none
-                - color: white
-                - background-color: rgb(38, 174, 96)
-                
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              icon: mdi:exit-run
+              icon: mdi:power
               entity: script.home_away
-              name: Adiós
-              # size: 40px
+              name: Apagar luces
+              size: 40px
               color_type: card
               color: rgb(223, 255, 97)
               style:
@@ -144,36 +124,25 @@ views:
             - type: "custom:button-card"
               icon: mdi:sleep
               entity: script.bed_time
-              name: A dormir
-              # size: 40px
+              name: Buenas noches
+              size: 40px
               color_type: card
               color: rgb(223, 255, 97)
               style:
                 - text-transform: none
                 - color: white
                 - background-color: rgb(28, 128, 199)
-            - type: "custom:button-card"
-              color_type: blank-card
     
     # Thermostat
-    - type: vertical-stack
-      cards:
-        - type: markdown
-          content: >
-            ## Termostato
-        - type: thermostat
-          entity: climate.nest
-          step_size: 0.5
-        # - type: custom:simple-thermostat
-        #   entity: climate.nest
-        #   step_size: 0.5
+    - type: thermostat
+      entity: climate.nest
+    # - type: custom:simple-thermostat
+    #   entity: climate.nest
+    #   step_size: 0.5
     
     # Parkings
     - type: vertical-stack
       cards:
-        - type: markdown
-          content: >
-            ## Parking
         - type: picture-glance
           title: Seat León
           entities:
@@ -183,10 +152,8 @@ views:
     # Vacuum
     - type: vertical-stack
       cards:
-        - type: markdown
-          content: >
-            ## Limpieza
         - type: picture-elements
+          title: Limpieza
           image: '/local/images/vacuum_card.jpeg'
           elements:
             - type: icon
@@ -308,101 +275,6 @@ views:
         - type: sensor
           entity: sensor.iluminacion_gateaway
           name: Iluminación Gateway
-    
-    - type: vertical-stack
-      cards:
-        - type: markdown
-          content: >
-            ## Comedor
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              entity: switch.bola_comedor
-              icon: mdi:lightbulb
-              action: toggle
-              name: Bola
-              color_type: card
-              state:
-                - value: 'on'
-                  color: rgb(229, 214, 2)
-                - value: 'off'
-                  color: rgb(66, 68, 92)
-            - type: "custom:button-card"
-              entity: switch.cono_comedor
-              icon: mdi:lightbulb
-              action: toggle
-              name: Cono
-              color_type: card
-              state:
-                - value: 'on'
-                  color: rgb(229, 214, 2)
-                - value: 'off'
-                  color: rgb(66, 68, 92)
-            - type: "custom:button-card"
-              entity: switch.arbol_navidad
-              icon: mdi:pine-tree
-              action: toggle
-              name: Árbol
-              color_type: card
-              state:
-                - value: 'on'
-                  color: rgb(229, 214, 2)
-                - value: 'off'
-                  color: rgb(66, 68, 92)
-            - type: "custom:button-card"
-              color_type: blank-card
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              icon: mdi:lightbulb
-              entity: script.turn_on_livingroom_ambient_lights
-              name: Luces ambiente
-              color_type: card
-              color: rgb(223, 255, 97)
-              size: 35px
-              style:
-                - text-transform: none
-                - color: white
-                - background-color: rgb(38, 174, 96)
-      
-    - type: vertical-stack
-      cards:
-        - type: markdown
-          content: >
-            ## Despacho
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              entity: switch.sonoff02
-              icon: mdi:lightbulb
-              action: toggle
-              name: Piedra
-              color_type: card
-              state:
-                - value: 'on'
-                  color: rgb(229, 214, 2)
-                - value: 'off'
-                  color: rgb(66, 68, 92)
-            - type: "custom:button-card"
-              color_type: blank-card
-            - type: "custom:button-card"
-              color_type: blank-card
-            - type: "custom:button-card"
-              color_type: blank-card
-        - type: horizontal-stack
-          cards:
-            - type: "custom:button-card"
-              icon: mdi:lightbulb
-              entity: script.turn_on_office_ambient_lights
-              name: Luces ambiente
-              color_type: card
-              color: rgb(223, 255, 97)
-              size: 35px
-              style:
-                - text-transform: none
-                - color: white
-                - background-color: rgb(38, 174, 96)
-
 
 ####################################################
 #                                                  #
@@ -469,14 +341,7 @@ views:
   title: Preferencias
   icon: mdi:settings
   cards:
-    
-    # Zigbee
-    - type: custom:group-card
-      card:
-        type: entities
-        title: Zigbee
-      group: group.zigbee_group
-    
+  
     # Notifications
     - id: notifications
       type: entities
@@ -493,47 +358,9 @@ views:
     - id: automations
       type: entities
       title: Automatizaciones
-      show_header_toggle: false
+      show_header_toggle: true
       entities:
         - entity: input_boolean.gateway_light_night_mode
         - entity: input_boolean.daily_vacuum
           name: Limpieza diaria
           icon: mdi:broom
-
-    # Climatología
-    - id: climatologia
-      type: entities
-      title: Climatología
-      show_header_toggle: false
-      entities:
-        - type: section
-          label: Exterior
-        - sensor.dark_sky_temperature
-        - sensor.dark_sky_apparent_temperature
-        - sensor.dark_sky_humidity
-        - sensor.dark_sky_wind_speed
-        - sensor.dark_sky_pressure
-        - sensor.dark_sky_precip_intensity
-        - sensor.dark_sky_cloud_coverage
-        - type: section
-          label: Comedor
-        - sensor.nest_thermostat_temperature
-        - sensor.nest_thermostat_humidity
-        - type: section
-          label: Habitación Alma
-        - sensor.temperatura_alma
-        - sensor.humedad_alma
-        - sensor.presion_alma
-        - type: section
-          label: Salita
-        - sensor.temperatura_dormitorio
-        - sensor.humedad_dormitorio
-        - sensor.presion_dormitorio
-        
-    - id: puertas
-      type: entities
-      title: Puertas y ventanas
-      show_header_toggle: false
-      entities:
-        - entity: binary_sensor.puerta_entrada
-          secondary_info: last-changed

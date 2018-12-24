@@ -15,3 +15,15 @@
     longitude: 1.147690
     radius: 200
     icon: mdi:briefcase
+    
+  - name: Seat León
+    latitude: 41.104847
+    longitude: 1.144704
+    radius: 10
+    icon: mdi:car
+    
+  - name: Ford Focus
+    latitude: 41.144392
+    longitude: 1.147690
+    radius: 10
+    icon: mdi:car

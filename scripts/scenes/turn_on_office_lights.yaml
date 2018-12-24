@@ -1,13 +1,14 @@
 ###################################################
 #                                                 #
-#                 Buenas noches                   #
+#           Encender luces despacho               #
 #                                                 #
 ###################################################
 
-alias: Buenas noches
+alias: Encender luces despacho
 sequence:
 
-  - alias: Apagar todas las luces
-    service: script.turn_on
-    entity_id:
-      - script.home_away
+  - alias: Encender luces despacho
+    service: switch.turn_on
+    data:
+      entity_id: 
+        - switch.sonoff02

@@ -1,10 +1,10 @@
 ###################################################
 #                                                 #
-#                  Buenos días                    #
+#              Bienvenido a casa                  #
 #                                                 #
 ###################################################
 
-alias: Buenos días
+alias: Bienvenido a casa
 sequence:
 
   - alias: Encender luces del comedor
@@ -17,7 +17,7 @@ sequence:
     data:
       entity_id: switch.leds_cocina
 
-  # - alias: Encendido TV comedor al despertarse
-  #   service: script.turn_on
-  #   entity_id:
-  #     - script.wakeup_time_tv
+  - alias: Encender luces despacho
+    service: script.turn_on
+    entity_id:
+      - script.turn_on_office_lights

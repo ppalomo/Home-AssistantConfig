@@ -1,10 +1,20 @@
-# Light automations
+####################################################
+#                                                  #
+#                     Lights                       #
+#                                                  #
+####################################################
+
 gateway_light_night_mode:
   name: Encendido automático de la luz del gateway
   icon: mdi:lightbulb-on-outline
   initial: on
 
-# Notifications
+####################################################
+#                                                  #
+#                  Notifications                   #
+#                                                  #
+####################################################
+
 notify_presence:
   name: Notificaciones de presencia
   icon: mdi:bell-ring
@@ -35,8 +45,24 @@ notify_vibration:
   icon: mdi:vibrate
   initial: on
 
-# Vacuum
+####################################################
+#                                                  #
+#                     Vacuum                       #
+#                                                  #
+####################################################
+
 daily_vacuum:
   name: Limpieza diaria
   icon: mdi:robot-vacuum
   initial: off
+
+####################################################
+#                                                  #
+#                     Zigbee                       #
+#                                                  #
+####################################################
+
+zigbee_permit_join:
+  name: Allow devices to join
+  initial: off
+  icon: mdi:cellphone-wireless

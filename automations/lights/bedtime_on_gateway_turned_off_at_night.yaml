@@ -5,6 +5,7 @@
 ###################################################
 
 - alias: Apagado automático de luces
+  initial_state: true
 
   trigger:
 

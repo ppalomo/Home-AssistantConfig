@@ -53,14 +53,33 @@ input_boolean.daily_vacuum:
 sensor.dark_sky_temperature:
   friendly_name: Temperatura exterior
 
+sensor.dark_sky_apparent_temperature:
+  friendly_name: Temperatura aparente exterior
+
 sensor.dark_sky_humidity:
-  friendly_name: Humedad relativa exterior
+  friendly_name: Humedad exterior
 
 sensor.dark_sky_precip_intensity:
   friendly_name: Precipitación
 
 sensor.dark_sky_wind_speed:
   friendly_name: Velocidad del viento
+  
+sensor.dark_sky_pressure:
+  friendly_name: Presión atmosférica
+  
+sensor.dark_sky_cloud_coverage:
+  friendly_name: Covertura de nubes
+
+####################################################
+#                                                  #
+#               Puertas y ventanas                 #
+#                                                  #
+####################################################
+
+binary_sensor.puerta_entrada:
+  friendly_name: Puerta de entrada
+  icon: mdi:door
 
 ####################################################
 #                                                  #

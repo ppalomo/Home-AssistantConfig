@@ -123,6 +123,7 @@ groups:
       entities:
         - switch.bola_comedor
         - switch.cono_comedor
+        - switch.0x7cb03eaa00b1a73a_switch # lampara_pie_comedor
         - switch.leds_cocina
         - light.luz_gateway
         - switch.bola_salita
